@@ -1,0 +1,23 @@
+.page-footer{
+    background-color: #FFFFFF;
+    // position: relative;
+    z-index: 0;
+    .footer{
+        // max-width: inherit;
+        color: #000000;
+        padding: 0;
+        width: 100%;
+        .footerV1{
+            // max-width: 1920px;
+            margin: 0 auto;
+            float: none;
+            background-color: #FFFFFF;
+            &.w{
+              
+            }
+            .footer-v1-content{
+
+            }
+        }
+    }
+}

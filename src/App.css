@@ -13,6 +13,14 @@
   }
 }
 
+body{
+  font-family: 'Cantarell',sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1.42857143;
+  color: #000;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -36,3 +44,4 @@
     transform: rotate(360deg);
   }
 }
+
