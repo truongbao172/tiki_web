@@ -1,23 +1,83 @@
 .page-footer{
-    background-color: #FFFFFF;
-    // position: relative;
+    margin-top: 50px;
+    background-color: #ffff;
+    width: 100%;
     z-index: 0;
     .footer{
-        // max-width: inherit;
         color: #000000;
         padding: 0;
         width: 100%;
         .footerV1{
-            // max-width: 1920px;
-            margin: 0 auto;
-            float: none;
-            background-color: #FFFFFF;
-            &.w{
-              
-            }
+            width: 95%;
+            margin:  0 auto;
             .footer-v1-content{
-
+                .details-v3 {
+                    font-size:18px;
+                    line-height:25.7143px;
+                    margin:0px 0px 10px;
+                }
+                .list_page{
+                   a{
+                    color: black;
+                    font-size: 18px;
+                    line-height:25.7143px ;
+                   }
+                }
+                .list_hashTag{
+                    span{
+                        display: inline-block;
+                        font-size: 18px;
+                        line-height: 25px;
+                        margin:  0px 10px 0px 0px;
+                    }
+                }
+                .mg-mobile{
+                    .social-icons {
+                        margin: 0 5px 5px 0;
+                        width: 40px ;
+                        height: 40px ;
+                        font-size: 20px;
+                        line-height: 38px !important;
+                        color: #ffff;
+                        text-shadow: none;
+                        border: 1px solid #AAA;
+                        border-radius: 3px;
+                        overflow: hidden;
+                        display: inline-block;
+                        text-align: center !important;
+                    } 
+                    .si-colored {
+                        border-color: transparent !important;
+                    }
+                    .si-facebook{
+                        background-color: #3B5998 !important;
+                    }
+                    .si-instagram{
+                        background-color: #3F729B !important;
+                    }
+                    .si-pinterest{
+                        background-color: #C8232C !important;
+                    }
+                }
+                .mobile-toggle{
+                    .footer-v3-list{
+                        li{
+                            .color-tiki-red{
+                            color: #cd4c21;
+                            display: inline;
+                            font-size: 18px;
+                            line-height: 25px;
+                            text-align: left;
+                            &:hover{
+                                text-decoration: underline;
+                            }
+                            }
+                        }
+                    }
+                }
+               
             }
         }
     }
+    
 }

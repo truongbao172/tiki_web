@@ -11,7 +11,7 @@ const Footer = () => {
                   <p className="details-v3 mb-3">
                     ©2022 LAMPLIGHT FARMS INC. All Rights Reserved.
                   </p>
-                  <p className="mb-3">
+                  <p className="list_page mb-3">
                     <a href="" title="Privacy Notice">
                       Privacy
                     </a>
@@ -34,22 +34,16 @@ const Footer = () => {
                   </p>
                   <div className="mg-mobile">
                     <a href="" className="social-icons si-colored si-facebook" aria-label="TIKI Facebook" title="TIKI Facebook" target="_blank">
-                      <i className="icon-facebook" />
-                      <i className="icon-facebook" />
-                      <span className="sr-only">Tiki Facebook</span>
+                      <i className="fa-brands fa-facebook-f" />
                     </a>
                     <a href="" className="social-icons si-colored si-instagram" aria-label="TIKI Instagram" title="TIKI Instagram" target="_blank">
-                      <i className="icon-instagram" />
-                      <i className="icon-instagram" />
-                      <span className="sr-only">Tiki Instagram</span>
+                    <i class="fa-brands fa-instagram"></i>
                     </a>
                     <a href="" className="social-icons si-colored si-pinterest" aria-label="TIKI Pinterest" title="TIKI Pinterest" target="_blank">
-                      <i className="icon-pinterest" />
-                      <i className="icon-pinterest" />
-                      <span className="sr-only">Tiki Pinterest</span>
+                      <i class="fa-brands fa-pinterest-p"></i>
                     </a>
                   </div>
-                  <p className="mb-3">
+                  <p className="list_hashTag mb-3">
                     <span className="mr-3" aria-label="hashtag Tiki Brand">
                       #TIKIBrand
                     </span>
