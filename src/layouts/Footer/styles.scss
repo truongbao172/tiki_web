@@ -1,6 +1,7 @@
 .page-footer{
-    margin-top: 50px;
-    background-color: #ffff;
+    margin-top: 60px;
+    background-color: #f4f4f4;
+    margin-bottom: 120px;
     width: 100%;
     z-index: 0;
     .footer{
@@ -21,6 +22,9 @@
                     color: black;
                     font-size: 18px;
                     line-height:25.7143px ;
+                    &:hover{
+                        text-decoration: underline;
+                    }
                    }
                 }
                 .list_hashTag{
