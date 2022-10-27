@@ -1,0 +1,54 @@
+.cardHomePage{
+    .cart_content{
+        .homepage-cta-img{
+            img{
+                box-shadow: -10px 10px 0px 0px #f7b917;
+                width: 100%;
+                height: auto;
+            }
+        }
+        .homepage-cta-content{
+            padding: 40px;
+            font-family: 'Cantarell',sans-serif;
+            h2{
+                
+                font-size: 24px;
+                font-weight: 900;
+                line-height: 1.42857143;
+                margin: 25px 0px 20px;
+                text-transform: uppercase;
+            }
+            p{
+                font-size: 18px;
+                line-height: 26px;
+                margin: 0px 0px 10px;
+            }
+            .button-black{
+                font-size: 18px;
+                line-height: 25px;
+                padding: 10px 15px;
+                background-color: #000;
+                color: #ffffff;
+                &:hover{
+                    background-color:#f7b917;
+                    color: #000;
+                }
+            }
+            .anchor-tiki-black{
+                p{
+                    .font-weight-bold{
+                        font-weight: 700 !important;
+                    }
+                    span{
+                        font-size: 18px;
+                        line-height: 25px;
+                        padding-right: 0.25rem;
+                    }
+                    a{
+                        color: #000;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,48 @@
+@font-face {
+    font-family: MegaFresh;
+    src: url(../../assects/Front/MegaFresh.ttf);
+  }
+#Banner{
+    .Banner_content{
+        position: relative;
+        .Banner_img{
+            width: 100%;
+            img{
+                width: 100%;
+                height: auto;
+            }
+        }
+        .Banner_button{
+            color: white;
+            position: absolute;
+            top: 40%;
+            width: 100%;
+            .Banner_text{
+                span{
+                    color: #ffffff;
+                    font-size: 80px;
+                    font-weight: 700;
+                    letter-spacing: 3px;
+                    line-height: 96px;
+                    text-shadow: #000000 1px 1px 1px;
+                    font-family: 'MegaFresh' !important;
+                }
+            }
+            .btn_shop{
+                background-color: #cd4c21;
+                color: #ffffff;
+                display: inline-block;
+                font-family: 'Cantarell',sans-serif;
+                font-size: 18px;
+                line-height: 25.7px;
+                padding: 10px 15px;
+                text-align: center;
+                border-color: transparent;
+                transition: all 0.5s;
+                &:hover{
+                    background-color: #000000;
+                }
+            }
+        }
+    }
+}

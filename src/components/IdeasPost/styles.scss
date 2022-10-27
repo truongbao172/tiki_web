@@ -1,0 +1,21 @@
+#ideaPost{
+    .page-main{
+        .row{
+            .ideas-post-img{
+
+                img{
+                    width: 100%;
+                    background-position: 50% 50%;
+                    background-size: cover;
+                    
+                }
+            }
+            .ideas-post-desc{
+
+            }
+            .bg-yellow{
+                background-color: #F7B917 !important;
+            }
+        }
+    }
+}

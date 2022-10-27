@@ -1,7 +1,7 @@
 import React from 'react'
 import './styles.scss'
 const Header = () => {
-    const listNav = [{name: "MY ACCOUNT", url:"/customer"},{name: "TIKI IDEAS", url:""}, {name: "CUSTOMER SERVIVE", url:""} ,{name: "BUYER'S GUIDE", url:""} ,{name: "FAQS", url:""}]
+    const listNav = [{name: "MY ACCOUNT", url:"/customer"},{name: "TIKI IDEAS", url:""}, {name: "CUSTOMER SERVICE", url:""} ,{name: "BUYER'S GUIDE", url:""} ,{name: "FAQS", url:""}]
     const listNav2 = [{name: "TORCHES & TABLETOP", url:"/customer"},{name: "OUTDOORLIGHTIN", url:""}, {name: "FIRE PITS", url:""}, {name: "FUEL & WOOD PELLETS", url:""} ,{name: "PARTS & ACCESSORIES", url:""} ,{name: "SALE", url:""}]
     const renderListNav = () =>{
        return <>

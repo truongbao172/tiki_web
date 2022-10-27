@@ -37,10 +37,10 @@ const Footer = () => {
                       <i className="fa-brands fa-facebook-f" />
                     </a>
                     <a href="" className="social-icons si-colored si-instagram" aria-label="TIKI Instagram" title="TIKI Instagram" target="_blank">
-                    <i class="fa-brands fa-instagram"></i>
+                    <i className="fa-brands fa-instagram"></i>
                     </a>
                     <a href="" className="social-icons si-colored si-pinterest" aria-label="TIKI Pinterest" title="TIKI Pinterest" target="_blank">
-                      <i class="fa-brands fa-pinterest-p"></i>
+                      <i className="fa-brands fa-pinterest-p"></i>
                     </a>
                   </div>
                   <p className="list_hashTag mb-3">
