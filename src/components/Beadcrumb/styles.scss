@@ -1,0 +1,23 @@
+#beadCrumb{
+    font-size: 14px;
+    line-height: 18px;
+    text-align: left;
+    text-transform: uppercase;
+    color: black;
+    .breadcrumb-item+.breadcrumb-item::before {
+        float: left;
+        padding-right: var(--bs-breadcrumb-item-padding-x);
+        color: black;
+        font-size: 18px;
+        content: var(--bs-breadcrumb-divider, ">");
+    }
+    .breadcrumb-item{
+        a{
+            color: #000000;
+            text-decoration: underline;
+        }
+        &.active{
+            color: #000000;
+        }
+    }
+}

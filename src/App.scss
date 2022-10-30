@@ -44,3 +44,20 @@ a {
 li{
   list-style: none;
 }
+.btn_oran{
+  background-color: #c44a20;
+  color: #000000;
+  font-size: 14px;
+  font-weight: 900;
+  line-height: 16px;
+  margin: 0px 15px 0px 0px;
+  padding: 7px 15px;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 0px;
+  &:hover{
+      background-color: #000000;
+      color: #ffffff;
+  }
+
+}

@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from './pages/HomePage';
 import MyAccount from './pages/MyAccount';
 import Layout from './HOCs/layout';
+import CreateAccount from './pages/CreateAccount';
 function App() {
   return (
     <div>
@@ -12,6 +13,7 @@ function App() {
             <Route path="/" element={<Layout />}>
                 <Route index element={<Home />} />
                 <Route path='/customer' element={<MyAccount />} />
+                <Route path='/customer/account/create/' element={<CreateAccount />} />
             </Route>
           </Routes>
         </Router>

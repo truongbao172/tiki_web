@@ -1,3 +1,100 @@
-.myAccount{
+#myAccount{
+    margin-top: 40px;
+    font-family: 'Cantarell',sans-serif;
     padding: 0 15px;
+    .row{
+        margin: 0px !important;
+        padding: 0px !important;
+    }
+    .myAccount_title{
+        h1{
+            color: #000;
+            font-weight: 900;
+            line-height: 50px;
+            font-size: 45px;
+            margin: 0px 0px 20px;
+        }
+    }
+    .main {
+        padding: 0px 10px;
+        .btn_login{
+            h5{
+                color: #cd4c21;
+                font-size: 18px;
+                line-height: 26px;
+                text-align: center;
+                display: contents;
+            }
+        }
+    }
+    @media screen and (max-width: 450px) {
+    .login-form{
+            margin-top: 10%;
+    }  
+    }
+    @media screen and (min-width: 768px){
+        .main{
+            margin-left: 40%; 
+        }
+        .login-form{
+           
+        }
+
+    }
+    .form-group{
+        margin-bottom: 20px;
+        label{
+            font-weight: 600;
+            line-height: 25px;
+            font-size: 18px;
+            margin-bottom: 10px;
+            display: block;
+          
+        }
+        input{
+            background-color: #ffffff;
+            border-color: #b7b7b7;
+            border-radius: 1px;
+            border-style: solid;
+            border-width: 1px;
+            display: inline-block;
+            line-height: 23px;
+            height: 32px;
+            padding: 0px 9px;
+            width: 80%;
+            &:focus{
+                outline: none;
+                box-shadow: none;
+            }
+        }
+    }
+    
+    .block-new-customer-heading{
+        font-size: 24px;
+        font-weight: 900;
+        line-height: 26px;
+        margin: 25px 0px 20px;
+        text-transform: uppercase;
+    }
+    .login-main-text{
+        margin-top: 20%;
+        padding: 60px;
+        color: #fff;
+    }
+    .p_title{
+        font-size: 18px;
+        line-height: 26px;
+        max-width: 0px 0px 20px;
+    }
+    .doc{
+        color: #cd4c21;
+    }
+    .login-main-text h2{
+        font-weight: 300;
+    }
+    
+    .btn-black{
+        background-color: #000 !important;
+        color: #fff;
+    }
 }

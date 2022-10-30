@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import "./styles.scss"
 function Banner() {
   return (
@@ -11,7 +12,7 @@ function Banner() {
                 <div className='Banner_text'>
                     <span>Fall Vibes Anywhere You Want</span>
                 </div>
-                <a href='' className='btn_shop'>SHOP NOW</a>
+                <Link to='' className='btn_shop'>SHOP NOW</Link>
             </div>
         </div>
     </div>
