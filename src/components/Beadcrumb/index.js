@@ -1,13 +1,21 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import "./styles.scss"
-function Beadcrumb() {
+const Beadcrumb = (props) => {
+  const data = props.beadcrumbProp
+  console.log("beadcrumbProp",data)
+  const renderBeadcrumb = () =>{
+    return data.map((item)=>{
+      return <li className="breadcrumb-item"><Link className={`${item.status == 'ACTIVE' ? "active" : ""}`} to={item.url}>{item.name}</Link></li>
+      })
+  }
   return (
     <div id='beadCrumb'>
       <nav aria-label="breadcrumb">
             <ol className="breadcrumb">
-                <li className="breadcrumb-item"><Link to="/">Home</Link></li>
-                <li className="breadcrumb-item active" aria-current="page">ACCOUNT SIGN IN</li>
+                {/* <li className="breadcrumb-item"><Link to="/">Home</Link></li>
+                <li className="breadcrumb-item active" aria-current="page">ACCOUNT SIGN IN</li> */}
+               {renderBeadcrumb()}
             </ol>
       </nav>
     </div>

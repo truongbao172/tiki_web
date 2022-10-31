@@ -16,8 +16,10 @@
             color: #000000;
             text-decoration: underline;
         }
-        &.active{
-            color: #000000;
-        }
+      
+    }
+    a.active{
+        color: #000000;
+        text-decoration: none;
     }
 }

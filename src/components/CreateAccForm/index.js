@@ -2,30 +2,29 @@ import React from 'react'
 import "./styles.scss"
 function CreateAccForm() {
     return (
-        <div id="create_acc_form text-left">
-
+        <div id="create_acc_form" className='text-left'>
             <form>
                 <div className='info'>
-                    <div className='form_title'>
+                    <legend className='form_title'>
                         Personal Information
-                    </div>
-                    <div className="form-group">
-                        <label>First Name <span>*</span></label>
+                    </legend>
+                    <div className="form-group field">
+                        <label>First Name <span className='doc'>*</span></label>
                         <input type="text" className="form-control" />
                     </div>
-                    <div className="form-group">
-                        <label>Last Name <span>*</span></label>
+                    <div className="form-group field">
+                        <label>Last Name <span className='doc'>*</span></label>
                         <input type="text" className="form-control" />
                     </div>
-                    <div className="form-group form-check">
-                        <input type="checkbox" className="form-check-input" id="exampleCheck1" />
-                        <label className="form-check-label" htmlFor="exampleCheck1">Sign Up for TIKI Email</label>
+                    <div className="form-group field">
+                        <input type="checkbox" id="exampleCheck1" />
+                        <span className="form-check-label" htmlFor="exampleCheck1">Sign Up for TIKI Email</span>
                     </div>
-                    <div className="form-group">
+                    <div className="form-group field">
                         <label >What is your birthday?</label>
                         <input type="date" className="form-control" />
                     </div>
-                    <div className="form-group">
+                    <div className="form-group field">
                         <label htmlFor="exampleFormControlSelect1">Which gender do you identify with?</label>
                         <select className="form-select" aria-label="">
                             <option value={1}></option>
@@ -34,7 +33,7 @@ function CreateAccForm() {
                             <option value={4}>Not Specified</option>
                         </select>
                     </div>
-                    <div className="form-group">
+                    <div className="form-group field">
                         <label htmlFor="exampleFormControlSelect2">What is your household size (including you)?</label>
                         <select className="form-select" aria-label="">
                             <option value={1}></option>
@@ -46,7 +45,7 @@ function CreateAccForm() {
                             <option value={7}>6+</option>
                         </select>
                     </div>
-                    <div className="form-group">
+                    <div className="form-group field">
                         <label htmlFor="">Which of the following are in your household?</label>
                         <div>
                             <input type="checkbox" name="household[]" id="household-option-2" defaultValue={100} />Children ages 0-10
@@ -58,7 +57,7 @@ function CreateAccForm() {
                             <input type="checkbox" name="household[]" id="household-option-2" defaultValue={100} />Dog(s)
                         </div>
                     </div>
-                    <div className="form-group">
+                    <div className="form-group field">
                         <label htmlFor="exampleFormControlSelect3">Do you rent or own?</label>
                         <select className="form-select" aria-label="">
                             <option value={1}></option>
@@ -66,7 +65,7 @@ function CreateAccForm() {
                             <option value={3}>Own</option>
                         </select>
                     </div>
-                    <div className="form-group">
+                    <div className="form-group field">
                         <label htmlFor="">What are your interests?</label>
                         <div>
                             <input type="checkbox" name="interests[]" id="interests-option-1" defaultValue={118} />Baby
@@ -129,7 +128,7 @@ function CreateAccForm() {
                             <input type="checkbox" name="interests[]" id="interests-option-20" defaultValue={118} />Volunteering
                         </div>
                     </div>
-                    <div className="form-group">
+                    <div className="form-group field">
                         <label htmlFor="">How would you classify your style?</label>
                         <div className="control">
                             <div>
@@ -148,9 +147,9 @@ function CreateAccForm() {
                                 <input type="checkbox" name="style[]" id="style-option-8" defaultValue={193} />Bohemian          </div>
                         </div>
                     </div>
-                    <div classname="form-group">
+                    <div classname="form-group field">
                         <label htmlfor="exampleFormControlSelect4">On average, how many outdoor torches do you buy each year?</label>
-                        <select className="form-select" id="torches_per_year" name="torches_per_year">
+                        <select className="form-select field" id="torches_per_year" name="torches_per_year">
                             <option value selected="selected"> </option>
                             <option value={268}>0</option>
                             <option value={271}>1-2</option>
@@ -159,9 +158,9 @@ function CreateAccForm() {
                             <option value={280}>10+</option>
                         </select>
                     </div>
-                    <div classname="form-group">
+                    <div classname="form-group field">
                         <label htmlfor="exampleFormControlSelect5">During what times of year do you use your outdoor torches?</label>
-                        <select className="form-select" id="time_of_year" name="time_of_year">
+                        <select className="form-select field" id="time_of_year" name="time_of_year">
                             <option value selected="selected"> </option>
                             <option value={283}>Mostly Spring</option>
                             <option value={286}>Mostly Summer</option>
@@ -170,7 +169,7 @@ function CreateAccForm() {
                             <option value={295}>All year</option>
                         </select>
                     </div>
-                    <div className="form-group">
+                    <div className="form-group field">
                         <label htmlFor="">To which of the following do you relate?</label>
                         <div className="control">
                             <div>
@@ -187,7 +186,7 @@ function CreateAccForm() {
                                 <input type="checkbox" name="relate[]" id="relate-option-7" defaultValue={313} />Gardener          </div>
                         </div>
                     </div>
-                    <div className="form-group">
+                    <div className="form-group field">
                         <label htmlFor="">What are your top sources for information and inspiration about outdoor entertaining?</label>
                         <div className="control">
                             <div><input type="checkbox" name="sources_of_info[]" id="sources_of_info-option-2" defaultValue={316} />Search engines/apps (Google, Bing, Yahoo, etc.)          </div>
@@ -204,27 +203,27 @@ function CreateAccForm() {
                             <div><input type="checkbox" name="sources_of_info[]" id="sources_of_info-option-13" defaultValue={349} />Newspapers          </div>
                         </div>
                     </div>
-                    <div className="mb-3">
+                    <div className="mb-3 field">
                         <label htmlFor="exampleFormControlTextarea1" className="form-label">Please list some of your favorite sources for outdoor entertaining news and trends.</label>
                         <textarea className="form-control" id="exampleFormControlTextarea1" rows={5} defaultValue={""} />
                     </div>
                 </div>
-                <div className='account'>
+                <div className='account mt-5'>
                     <div className='form_title'>
                         Sign-in Information
                     </div>
                     <div>
-                        <div>
-                            <label htmlFor="exampleInputEmail1" className="form-label">Email <span>*</span></label>
+                        <div className='field'>
+                            <label htmlFor="exampleInputEmail1" className="form-label">Email <span className='doc'>*</span></label>
                             <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
                             <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
                         </div>
-                        <div >
-                            <label htmlFor="exampleInputPassword1" className="form-label">Password  <span>*</span></label>
+                        <div className='field'>
+                            <label htmlFor="exampleInputPassword1" className="form-label">Password  <span className='doc'>*</span></label>
                             <input type="password" name="password" id="password" title="Password" className="form-control" data-password-min-length={8} data-password-min-character-sets={3} data-validate="{required:true, 'validate-customer-password':true}" autoComplete="off" aria-required="true" aria-autocomplete="list" />
                         </div>
-                        <div >
-                            <label htmlFor="exampleInputPassword1" className="form-label">Confirm Password  <span>*</span></label>
+                        <div className='field'>
+                            <label htmlFor="exampleInputPassword1" className="form-label">Confirm Password  <span className='doc'>*</span></label>
                             <input type="password" name="password_confirmation" title="Confirm Password" id="password-confirmation" className="form-control" data-validate="{required:true, equalTo:'#password'}" aria-required="true" />
                         </div>
                     </div>

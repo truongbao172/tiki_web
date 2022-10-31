@@ -6,13 +6,10 @@
             padding: 0;
             margin: 0;
             .ideas-post-img{
-                padding: 0;
-                img{
-                    width: 100%;
-                    background-position: 50% 50%;
-                    background-size: cover;
-                    
-                }
+                background-position: center center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-attachment: scroll;
             }
             .ideas-post-desc{
                 padding: 0px 80px;

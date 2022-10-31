@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom'
 import Beadcrumb from '../../components/Beadcrumb'
 import "./styles.scss"
 const MyAccount = () => {
-
+    const beadcrumbProp = [{name:'HOME',status:'',url:'/'},{name:'ACCOUNT SIGN IN',status:'ACTIVE',url:'/customer'}]
   return (
       <div id="myAccount">
-        <Beadcrumb/>
+        <Beadcrumb beadcrumbProp={beadcrumbProp}/>
         <div className='myAccount_title text-center mb-5'>
           <h1>ACCOUNT SIGN IN</h1>
         </div>

@@ -8,7 +8,7 @@ const CreateAccount = () => {
           <h1>CREATE NEW CUSTOMER ACCOUNT</h1>
       </div>
       <div className='creAcc_form row'>
-          <div className='col-6'>
+          <div className='col-md-6 col-12'>
             <CreateAccForm/>
           </div>
       </div>

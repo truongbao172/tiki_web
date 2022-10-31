@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import './styles.scss'
 const Header = () => {
-    const listNav = [{name: "MY ACCOUNT", url:"/customer"},{name: "TIKI IDEAS", url:""}, {name: "CUSTOMER SERVICE", url:""} ,{name: "BUYER'S GUIDE", url:""} ,{name: "FAQS", url:""}]
+    const listNav = [{name: "MY ACCOUNT", url:"/customer"},{name: "TIKI IDEAS", url:"/ideas/"}, {name: "CUSTOMER SERVICE", url:""} ,{name: "BUYER'S GUIDE", url:""} ,{name: "FAQS", url:""}]
     const listNav2 = [{name: "TORCHES & TABLETOP", url:"/customer"},{name: "OUTDOORLIGHTIN", url:""}, {name: "FIRE PITS", url:""}, {name: "FUEL & WOOD PELLETS", url:""} ,{name: "PARTS & ACCESSORIES", url:""} ,{name: "SALE", url:""}]
     const renderListNav = () =>{
        return <>
@@ -62,7 +62,7 @@ const Header = () => {
             
             </div>
             <div className='header_logo text-center wlevel'>
-                    <Link className="logo" to="https://www.tikibrand.com/" title="TIKI Brand Logo" aria-label="TIKI Brand Logo">
+                    <Link className="logo" to="/" title="TIKI Brand Logo" aria-label="TIKI Brand Logo">
                         <img src="https://www.tikibrand.com/media/logo/stores/1/tiki-brand-logo.png" title="TIKI Brand Logo" alt="TIKI Brand Logo" width={170} height={68} />
                     </Link>
             </div>
@@ -70,7 +70,7 @@ const Header = () => {
          
         <div className='headerV2 text-center'>
             <div className='header_logo d-none'>
-                <Link className="logo" to="https://www.tikibrand.com/" title="TIKI Brand Logo" aria-label="TIKI Brand Logo">
+                <Link className="logo" to="/" title="TIKI Brand Logo" aria-label="TIKI Brand Logo">
                     <img src="https://www.tikibrand.com/media/logo/stores/1/tiki-brand-logo.png" title="TIKI Brand Logo" alt="TIKI Brand Logo" width={170} height={68} />
                 </Link>
             </div>
