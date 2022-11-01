@@ -1,11 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import "./styles.scss"
-function IdeasPost() {
+function IdeasPost({revert, seeProduct}) {
   return (
     <div id='ideaPost'>
       <div className='page-main mx-auto'>
-        <div className='row ideas-post'>
+        <div className={`row ideas-post ${revert ? "flex-row-reverse" : ""}`}>
           <div className='col-6 ideas-post-img order-md-1 order-1' style={{"backgroundImage":"url(https://www.tikibrand.com/media/ideas/Outdoor_Movie_Night_1-updated.jpg)"}}>
             {/* <img src="https://www.tikibrand.com/media/ideas/Outdoor_Movie_Night_1-updated.jpg" alt="" /> */}
           </div>
@@ -22,8 +22,9 @@ function IdeasPost() {
             <p className="tiki-idea-post-text">
               Summer nights are very enjoyable, so take advantage of the weather by taking family movie night out to the backyard. Bring back a classic, stream your favorite game or turn on the latest hit-- at the end of the day, the memories you make are the greatest gifts these nights give us!
             </p>
-            <p className="tiki-idea-post-tags text-uppercase pb-5">
+            <p className="tiki-idea-post-tags text-uppercase">
               Topics:<Link className="ideas-tags" to=""><span clasNames="ideas-filters-option-outdoor-living-everyday"> Everyday</span></Link><Link className="ideas-tags" to="/ideas/?cat=ideas-filters-option-space-backyard"><span class="ideas-filters-option-space-backyard">, Backyard</span></Link></p>
+            {seeProduct && <a href="" className='btn mb-4 set-border button-black'>SEE PRODUCT</a>}
           </div>
         </div>
       </div>

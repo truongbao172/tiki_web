@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import './styles.scss'
 const Header = () => {
     const listNav = [{name: "MY ACCOUNT", url:"/customer"},{name: "TIKI IDEAS", url:"/ideas/"}, {name: "CUSTOMER SERVICE", url:""} ,{name: "BUYER'S GUIDE", url:""} ,{name: "FAQS", url:""}]
-    const listNav2 = [{name: "TORCHES & TABLETOP", url:"/customer"},{name: "OUTDOORLIGHTIN", url:""}, {name: "FIRE PITS", url:""}, {name: "FUEL & WOOD PELLETS", url:""} ,{name: "PARTS & ACCESSORIES", url:""} ,{name: "SALE", url:""}]
+    const listNav2 = [{name: "TORCHES & TABLETOP", url:"torches&tabletop"},{name: "OUTDOORLIGHTIN", url:""}, {name: "FIRE PITS", url:""}, {name: "FUEL & WOOD PELLETS", url:""} ,{name: "PARTS & ACCESSORIES", url:""} ,{name: "SALE", url:""}]
     const renderListNav = () =>{
        return <>
         <ul>
@@ -16,14 +16,20 @@ const Header = () => {
         </ul>
        </>      
     }
-
+    const handelClick = (e) =>{
+        var elems = document.querySelector(".active");
+        if(elems !==null){
+        elems.classList.remove("active");
+        }
+        e.target.className = "active";
+    } 
     const renderListNav2 = () =>{
         return <>
         <ul className="navbar-nav me-auto mb-2 mb-lg-0 mx-auto">
         { listNav2.map(item => {
             return <li className="nav-item">
-             <Link className="nav-link " to={item.url}>
-                <span>
+             <Link className="nav-link" to={`/product/${item.url}`}>
+                <span onClick={(e)=>{handelClick(e)}}>
                     {item.name}
                 </span>
              </Link>

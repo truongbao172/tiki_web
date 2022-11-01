@@ -1,16 +1,16 @@
 import React from 'react'
 import "./styles.scss"
-function BannerIdeas() {
+function Banner2({data}) {
   return (
     <div id="bannerIdeas">
         <div className='banner_img'>
-          <img src="	https://www.tikibrand.com/media/ideas_banners/default/Landing_Page_IDEAS.jpg" alt="" />
+          <img src={data.img} alt="" />
         </div>
         <div className='banner_overplay'>
-            <h1>TIKI IDEAS</h1>
+            <h1>{data.title}</h1>
         </div>
     </div>
   )
 }
 
-export default BannerIdeas
+export default Banner2

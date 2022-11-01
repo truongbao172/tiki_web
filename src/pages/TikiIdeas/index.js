@@ -1,17 +1,18 @@
 import React from 'react'
 import Beadcrumb from '../../components/Beadcrumb'
-import IdeasPost from '../../components/IdeasPost'
-import BannerIdeas from './Component/BannerIdeas'
+import Banner2 from '../../components/Banner2'
 import Filter from './Component/Filter'
+import ListPost from './Component/ListPost'
 import "./styles.scss"
 const TikiIdeas = () => {
     const beadcrumbProp = [{name:'HOME',status:'',url:'/'},{name:'IDEAS',status:'ACTIVE',url:'/ideas/'}]
-  return (
+    const bannerProps = {img:"https://www.tikibrand.com/media/ideas_banners/default/Landing_Page_IDEAS.jpg", title: "TIKI IDEAS"}
+    return (
     <div id="tikiIdeas">
         <Beadcrumb beadcrumbProp={beadcrumbProp}/>
-        <BannerIdeas/>
+        <Banner2 data={bannerProps}/>
         <Filter/>
-        <IdeasPost/>
+        <ListPost/>
     </div>
   )
 }

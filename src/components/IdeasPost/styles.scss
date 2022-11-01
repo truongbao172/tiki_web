@@ -1,8 +1,9 @@
 #ideaPost{
+    margin-bottom: 80px;
     .page-main{
         .ideas-post{
             width: 100%;
-            overflow: hidden;
+            // overflow: hidden;
             padding: 0;
             margin: 0;
             .ideas-post-img{
@@ -38,13 +39,16 @@
                 .tiki-idea-post-tags{
                     font-size: 18px;
                     margin: 0px 0px 10px;
-                    padding: 0px 0px 30px;
+                    padding: 0px 0px 25px;
                     a{
                         color: black;
                         &:hover{
                             text-decoration: underline;
                         }
                     }
+                }
+                .set-border{
+                    border-radius: 0px;
                 }
             }
             

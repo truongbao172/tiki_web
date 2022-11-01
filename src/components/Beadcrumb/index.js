@@ -3,10 +3,9 @@ import { Link } from 'react-router-dom'
 import "./styles.scss"
 const Beadcrumb = (props) => {
   const data = props.beadcrumbProp
-  console.log("beadcrumbProp",data)
   const renderBeadcrumb = () =>{
-    return data.map((item)=>{
-      return <li className="breadcrumb-item"><Link className={`${item.status == 'ACTIVE' ? "active" : ""}`} to={item.url}>{item.name}</Link></li>
+    return data.map((item, index)=>{
+      return <li key={index} className="breadcrumb-item"><Link className={`${item.status == 'ACTIVE' ? "active" : ""}`} to={item.url}>{item.name}</Link></li>
       })
   }
   return (
