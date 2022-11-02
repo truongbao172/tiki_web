@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import './styles.scss'
 const Header = () => {
     const listNav = [{name: "MY ACCOUNT", url:"/customer"},{name: "TIKI IDEAS", url:"/ideas/"}, {name: "CUSTOMER SERVICE", url:""} ,{name: "BUYER'S GUIDE", url:""} ,{name: "FAQS", url:""}]
-    const listNav2 = [{name: "TORCHES & TABLETOP", url:"torches&tabletop"},{name: "OUTDOORLIGHTIN", url:""}, {name: "FIRE PITS", url:""}, {name: "FUEL & WOOD PELLETS", url:""} ,{name: "PARTS & ACCESSORIES", url:""} ,{name: "SALE", url:""}]
+    const listNav2 = [{name: "TORCHES & TABLETOP", url:"torches&tabletop"},{name: "OUTDOORLIGHTIN", url:"outdoor-lighting"}, {name: "FIRE PITS", url:"fire-pits"}, {name: "FUEL & WOOD PELLETS", url:""} ,{name: "PARTS & ACCESSORIES", url:"fuel-wood-pellets"} ,{name: "SALE", url:"sale"}]
     const renderListNav = () =>{
        return <>
         <ul>
