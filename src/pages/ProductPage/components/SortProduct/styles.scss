@@ -1,0 +1,49 @@
+.sortProduct{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 100px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 18px;
+    .cout_list_card{
+        span{
+            padding: 7px 0px;
+            text-align: left;
+            text-transform: uppercase;
+        }
+    }
+    .sortBy{
+        width: 300px;
+        span{
+            display: inline-block;
+            margin-right: 10px;
+        }
+        .dropdown{
+            border-bottom: 1px solid #B7B7B7;
+            text-transform: uppercase;
+            display: inline-block;
+            font-weight: 400;
+            padding: 0px 0px 6px 1px;
+            font-size: 12px;
+            span{
+                line-height: 18px;
+                margin: 0px 5px 0px 5px;
+                padding: 0px 30px 3px 0px;
+            }
+            .dropdown-menu{
+                border-radius: 0px;
+                font-size: 12px;
+                transform: translate(1px, 30px) !important;
+                li{
+                    a{
+                        &:hover{
+                            color: #ffffff !important;
+                            background-color: #0a58ca !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

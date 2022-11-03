@@ -3,6 +3,7 @@ import Banner2 from '../../components/Banner2'
 import Beadcrumb from '../../components/Beadcrumb'
 import LeftFilter from './components/LeftFilter'
 import ListCard from './components/ListCard'
+import SortProduct from './components/SortProduct'
 import "./styles.scss"
 const ProductPage = () => {
     const beadcrumbProp = [{name:'HOME',status:'',url:'/'},{name:'TORCHES & TABLETOP',status:'ACTIVE',url:'/'}]
@@ -21,6 +22,7 @@ const ProductPage = () => {
                     <LeftFilter/>
                 </div>
                 <div className='col-9'>
+                    <SortProduct/>
                     <ListCard/>
                 </div>
 

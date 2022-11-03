@@ -3,8 +3,31 @@ import Card from '../Card'
 import "./styles.scss"
 const ListCard = () => {
   return (
-    <div>
-        <Card/>
+    <div className='product-list-card'>
+        <div className='row'>
+          <div className='col-md-4 col-6'>
+            <Card/>
+          </div>
+          <div className='col-md-4 col-6'>
+            <Card/>
+          </div>
+          <div className='col-md-4 col-6'>
+            <Card/>
+          </div>
+          <div className='col-md-4 col-6'>
+            <Card/>
+          </div>
+          <div className='col-md-4 col-6'>
+            <Card/>
+          </div>
+          <div className='col-md-4 col-6'>
+            <Card/>
+          </div>
+          <div className='col-md-4 col-6'>
+            <Card/>
+          </div>
+          
+        </div>
     </div>
   )
 }
