@@ -132,19 +132,19 @@ function CreateAccForm() {
                         <label htmlFor="">How would you classify your style?</label>
                         <div className="control">
                             <div>
-                                <input type="checkbox" name="style[]" id="style-option-2" defaultValue={175} />Traditional          </div>
+                                <input type="checkbox" name="style[]" id="style-option-2" defaultValue={175} />Traditional</div>
                             <div>
-                                <input type="checkbox" name="style[]" id="style-option-3" defaultValue={178} />Rustic          </div>
+                                <input type="checkbox" name="style[]" id="style-option-3" defaultValue={178} />Rustic</div>
                             <div>
-                                <input type="checkbox" name="style[]" id="style-option-4" defaultValue={181} />Modern          </div>
+                                <input type="checkbox" name="style[]" id="style-option-4" defaultValue={181} />Modern</div>
                             <div>
-                                <input type="checkbox" name="style[]" id="style-option-5" defaultValue={184} />Contemporary          </div>
+                                <input type="checkbox" name="style[]" id="style-option-5" defaultValue={184} />Contemporary</div>
                             <div>
-                                <input type="checkbox" name="style[]" id="style-option-6" defaultValue={187} />Coastal          </div>
+                                <input type="checkbox" name="style[]" id="style-option-6" defaultValue={187} />Coastal</div>
                             <div>
-                                <input type="checkbox" name="style[]" id="style-option-7" defaultValue={190} />Vintage          </div>
+                                <input type="checkbox" name="style[]" id="style-option-7" defaultValue={190} />Vintage</div>
                             <div>
-                                <input type="checkbox" name="style[]" id="style-option-8" defaultValue={193} />Bohemian          </div>
+                                <input type="checkbox" name="style[]" id="style-option-8" defaultValue={193} />Bohemian</div>
                         </div>
                     </div>
                     <div classname="form-group field">
@@ -173,34 +173,34 @@ function CreateAccForm() {
                         <label htmlFor="">To which of the following do you relate?</label>
                         <div className="control">
                             <div>
-                                <input type="checkbox" name="relate[]" id="relate-option-2" defaultValue={298} />Occasional Party Thrower          </div>
+                                <input type="checkbox" name="relate[]" id="relate-option-2" defaultValue={298} />Occasional Party Thrower</div>
                             <div>
-                                <input type="checkbox" name="relate[]" id="relate-option-3" defaultValue={301} />Frequent Entertainer          </div>
+                                <input type="checkbox" name="relate[]" id="relate-option-3" defaultValue={301} />Frequent Entertainer</div>
                             <div>
-                                <input type="checkbox" name="relate[]" id="relate-option-4" defaultValue={304} />Backyard Griller          </div>
+                                <input type="checkbox" name="relate[]" id="relate-option-4" defaultValue={304} />Backyard Griller</div>
                             <div>
-                                <input type="checkbox" name="relate[]" id="relate-option-5" defaultValue={307} />Family Oriented          </div>
+                                <input type="checkbox" name="relate[]" id="relate-option-5" defaultValue={307} />Family Oriented</div>
                             <div>
-                                <input type="checkbox" name="relate[]" id="relate-option-6" defaultValue={310} />Backyard Enthusiast          </div>
+                                <input type="checkbox" name="relate[]" id="relate-option-6" defaultValue={310} />Backyard Enthusiast</div>
                             <div>
-                                <input type="checkbox" name="relate[]" id="relate-option-7" defaultValue={313} />Gardener          </div>
+                                <input type="checkbox" name="relate[]" id="relate-option-7" defaultValue={313} />Gardener</div>
                         </div>
                     </div>
                     <div className="form-group field">
                         <label htmlFor="">What are your top sources for information and inspiration about outdoor entertaining?</label>
                         <div className="control">
-                            <div><input type="checkbox" name="sources_of_info[]" id="sources_of_info-option-2" defaultValue={316} />Search engines/apps (Google, Bing, Yahoo, etc.)          </div>
-                            <div><input type="checkbox" name="sources_of_info[]" id="sources_of_info-option-3" defaultValue={319} />Retailers' websites/apps (i.e. Amazon.com, Walmart.com, Target.com)          </div>
-                            <div><input type="checkbox" name="sources_of_info[]" id="sources_of_info-option-4" defaultValue={322} />Social media (i.e. Facebook, Pinterest, Instagram, Snapchat, Twitter)          </div>
-                            <div><input type="checkbox" name="sources_of_info[]" id="sources_of_info-option-5" defaultValue={325} />Video sites/apps (i.e. YouTube, Vimeo)          </div>
+                            <div><input type="checkbox" name="sources_of_info[]" id="sources_of_info-option-2" defaultValue={316} />Search engines/apps (Google, Bing, Yahoo, etc.)</div>
+                            <div><input type="checkbox" name="sources_of_info[]" id="sources_of_info-option-3" defaultValue={319} />Retailers' websites/apps (i.e. Amazon.com, Walmart.com, Target.com)</div>
+                            <div><input type="checkbox" name="sources_of_info[]" id="sources_of_info-option-4" defaultValue={322} />Social media (i.e. Facebook, Pinterest, Instagram, Snapchat, Twitter)</div>
+                            <div><input type="checkbox" name="sources_of_info[]" id="sources_of_info-option-5" defaultValue={325} />Video sites/apps (i.e. YouTube, Vimeo)</div>
                             <div><input type="checkbox" name="sources_of_info[]" id="sources_of_info-option-6" defaultValue={328} />Publishers' and aggregator websites/apps (i.e. BuzzFeed, Reddit, Huffington Post, People, News sites)          </div>
-                            <div><input type="checkbox" name="sources_of_info[]" id="sources_of_info-option-7" defaultValue={331} />Magazines          </div>
-                            <div><input type="checkbox" name="sources_of_info[]" id="sources_of_info-option-8" defaultValue={334} />Websites/apps for product brands          </div>
-                            <div><input type="checkbox" name="sources_of_info[]" id="sources_of_info-option-9" defaultValue={337} />Television shows          </div>
-                            <div><input type="checkbox" name="sources_of_info[]" id="sources_of_info-option-10" defaultValue={340} />Radio shows or podcasts          </div>
-                            <div><input type="checkbox" name="sources_of_info[]" id="sources_of_info-option-11" defaultValue={343} />Blogs          </div>
-                            <div><input type="checkbox" name="sources_of_info[]" id="sources_of_info-option-12" defaultValue={346} />Other mobile apps          </div>
-                            <div><input type="checkbox" name="sources_of_info[]" id="sources_of_info-option-13" defaultValue={349} />Newspapers          </div>
+                            <div><input type="checkbox" name="sources_of_info[]" id="sources_of_info-option-7" defaultValue={331} />Magazines</div>
+                            <div><input type="checkbox" name="sources_of_info[]" id="sources_of_info-option-8" defaultValue={334} />Websites/apps for product brands</div>
+                            <div><input type="checkbox" name="sources_of_info[]" id="sources_of_info-option-9" defaultValue={337} />Television shows</div>
+                            <div><input type="checkbox" name="sources_of_info[]" id="sources_of_info-option-10" defaultValue={340} />Radio shows or podcasts</div>
+                            <div><input type="checkbox" name="sources_of_info[]" id="sources_of_info-option-11" defaultValue={343} />Blogs</div>
+                            <div><input type="checkbox" name="sources_of_info[]" id="sources_of_info-option-12" defaultValue={346} />Other mobile apps</div>
+                            <div><input type="checkbox" name="sources_of_info[]" id="sources_of_info-option-13" defaultValue={349} />Newspapers</div>
                         </div>
                     </div>
                     <div className="mb-3 field">
