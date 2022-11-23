@@ -1,5 +1,5 @@
 import './App.scss';
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes, useParams } from "react-router-dom";
 import Home from './pages/HomePage';
 import MyAccount from './pages/MyAccount';
 import Layout from './HOCs/layout';
@@ -18,7 +18,7 @@ function App() {
                 <Route path='/customer/account/create/' element={<CreateAccount />}/>
                 <Route path='/ideas/' element={<TikiIdeas />}/>
                 <Route path='/product/' element={<ProductPage />}>
-                  <Route path=":name" element={<ProductPage />} />
+                  <Route path=":nameId" element={<ProductPage />} />
                 </Route>
             </Route>
           </Routes>

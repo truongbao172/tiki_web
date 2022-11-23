@@ -1,4 +1,7 @@
 .header{
+    &.fixed-top{
+        background-color: #FFFFFF;
+    }
     @media (min-width: 768px){
         .headerV1 {
             padding-top: 5px;
@@ -13,6 +16,11 @@
             padding-right: 20px;
             width: auto;
         }
+    }
+    .activeNav{
+        background-color: #f7b917;
+        padding: 6px;
+        color: black !important;
     }
     .active{
         background-color: #f7b917;
@@ -102,6 +110,7 @@
     .headerV2{
         .header_nav{
             .navbar{
+                padding-bottom: 0;
                 .navbar-collapse{
                     .navbar-nav{
                         .nav-item{
@@ -117,6 +126,19 @@
                         }
                     }
                 }
+            }
+        }
+        .header_logo{
+            .logo{
+                img{
+                    @media (min-width: 768px){
+                        width: 71px;
+                        height: 34px;
+                    }
+                }
+            }
+            &.header-ticky{
+                position: fixed;
             }
         }
     }

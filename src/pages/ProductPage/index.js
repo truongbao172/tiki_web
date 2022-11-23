@@ -1,4 +1,5 @@
 import React from 'react'
+import { useParams } from 'react-router-dom'
 import Banner2 from '../../components/Banner2'
 import Beadcrumb from '../../components/Beadcrumb'
 import LeftFilter from './components/LeftFilter'
@@ -6,6 +7,8 @@ import ListCard from './components/ListCard'
 import SortProduct from './components/SortProduct'
 import "./styles.scss"
 const ProductPage = () => {
+    let { nameId } = useParams();
+    console.log("detail",nameId)
     const beadcrumbProp = [{name:'HOME',status:'',url:'/'},{name:'TORCHES & TABLETOP',status:'ACTIVE',url:'/'}]
     const bannerProps = {img:"https://www.tikibrand.com/media/ideas_banners/default/Landing_Page_IDEAS.jpg", title: "TORCHES & TABLETOP"}
   return (

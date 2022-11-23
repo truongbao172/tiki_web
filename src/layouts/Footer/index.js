@@ -1,7 +1,24 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./styles.scss";
+
+import { useEffect } from "react";
 const Footer = () => {
+  const list1 = ["ABOUT US","CAREERS","CONTACT US","PRESS ROOM","FAQS"]
+  const list2 = ["CUSTOMER SERVICE","EMAIL SIGN-UP","USAGE & INSTRUCTIONS","SHIPPING GUARANTEE","SUBSCRIPTIONS & OFFERS"]
+
+  const renderFooterList = (data)=>{
+      return <>
+          <ul className="footer-v3-list">
+                {
+                data.map((item, index)=>{
+                  return <li key={index} className="mb-2"><Link href="" aria-label={item} title={item} className="color-tiki-red">{item}</Link></li>
+                })
+                }
+              
+          </ul>
+      </>
+  }
   return (
     <div className="page-footer">
       <div className="footer content">
@@ -55,22 +72,10 @@ const Footer = () => {
                 </div>
             </div>
             <div className="col-md-3 col-sm-6 col-xs-12 mobile-toggle">
-              <ul className="footer-v3-list">
-                <li className="mb-2"><Link href="" aria-label="About Us" title="About Us" className="color-tiki-red">ABOUT US</Link></li>
-                <li className="mb-2"><Link href="" target="_blank" title="Careers" className="color-tiki-red">CAREERS</Link></li>
-                <li className="mb-2"><Link href="" aria-label="Contact Us" title="Contact Us" className="color-tiki-red">CONTACT US</Link></li>
-                <li className="mb-2"><Link href="" title="Press Room" className="color-tiki-red">PRESS ROOM</Link></li>
-                <li className="mb-2"><Link href="" target="_blank" title="SUBMIT A PRODUCT IDEA" className="color-tiki-red">SUBMIT A PRODUCT IDEA</Link></li>
-              </ul>
+              {renderFooterList(list1)}
             </div>
             <div className="col-md-3 col-sm-6 col-xs-12 mobile-toggle">
-              <ul className="footer-v3-list">
-                <li className="mb-2"><Link href="" title="Customer Service" className="color-tiki-red">CUSTOMER SERVICE</Link></li>
-                <li className="mb-2"><Link href="" title="Email Sign-Up" className="color-tiki-red">EMAIL SIGN-UP</Link></li>
-                <li className="mb-2"><Link href="" title="Usage & Instructions" className="color-tiki-red">USAGE &amp; INSTRUCTIONS</Link></li>
-                <li className="mb-2"><Link href="" title="Our Guarantee" className="color-tiki-red">OUR GUARANTEE</Link></li>
-                <li className="mb-2"><Link href="" title="Subscriptions & Discounts" className="color-tiki-red">SUBSCRIPTIONS &amp; OFFERS</Link></li>
-              </ul>
+              {renderFooterList(list2)}
             </div>
           </div>
         </div>

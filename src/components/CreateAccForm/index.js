@@ -1,6 +1,87 @@
 import React from 'react'
 import "./styles.scss"
 function CreateAccForm() {
+    const listInterests = ["Baby", "Cooking", "Crafting", "Decorating", "Electronics", "Fashion & Style", "Interior Design & Furniture", "Games", "Lighting", "Music", "Outdoors", "Parenting", "Pets", "Sports", "Travel", "Arts & Culture", "Movies & TV", "Food & Wine", "Health & Fitness", "Volunteering",];
+    const listClassify = ["Traditional",
+        "Rustic",
+        "Modern",
+        "Contemporary",
+        "Coastal",
+        "Vintage",
+        "Bohemian"]
+    const listRelate = ["Occasional Party Thrower",
+        "Frequent Entertainer",
+        "Backyard Griller",
+        "Family Oriented",
+        "Backyard Enthusiast",
+        "Gardener"]
+
+    const listSources = ["Search engines/apps (Google, Bing, Yahoo, etc.)",
+        "Retailers' websites/apps (i.e. Amazon.com, Walmart.com, Target.com)",
+        "Social media (i.e. Facebook, Pinterest, Instagram, Snapchat, Twitter)",
+        "Video sites/apps (i.e. YouTube, Vimeo)",
+        "Publishers' and aggregator websites/apps (i.e. BuzzFeed, Reddit, Huffington Post, People, News sites)",
+        "Magazines",
+        "Websites/apps for product brands",
+        "Television shows",
+        "Radio shows or podcasts",
+        "Blogs",
+        "Other mobile apps",
+        "Newspapers",]
+    const renderListInterests = (data) => {
+        return <>
+            <label htmlFor="">What are your interests?</label>
+            {
+                data.map((val, index) => {
+                    return <div>
+                        <input type="checkbox" name="interests[]" id={`interests-option-${index}`} defaultValue={val} />{val}
+                    </div>
+                })
+            }
+        </>
+    }
+
+    const renderClassify = (data) => {
+        return <>
+            <label htmlFor="">How would you classify your style?</label>
+            {
+                data.map((val, index) => {
+                    return <div>
+                        <input type="checkbox" name="style[]" id={`style-option-${index}`} defaultValue={val} />{val}
+                    </div>
+
+                })
+            }
+        </>
+    }
+    const renderRelate = (data) => {
+        return <>
+            <label htmlFor="">To which of the following do you relate?</label>
+            <div className="control">
+                {
+                    data.map((val, index) => {
+                        return <div>
+                            <input type="checkbox" name="relate[]" id={`relate-option-${index}`} defaultValue={val} />{val}
+                        </div>
+                    })
+                }
+            </div>
+        </>
+    }
+    const renderSources = (data) => {
+        return <>
+            <label htmlFor="">What are your top sources for information and inspiration about outdoor entertaining?</label>
+            <div className="control">
+                {
+                    data.map((val, index) => {
+                        return <div>
+                            <input type="checkbox" name="sources_of_info[]" id={`sources_of_info-option-${index}`} defaultValue={val} />{val}
+                        </div>
+                    })
+                }
+            </div>
+        </>
+    }
     return (
         <div id="create_acc_form" className='text-left'>
             <form>
@@ -66,86 +147,14 @@ function CreateAccForm() {
                         </select>
                     </div>
                     <div className="form-group field">
-                        <label htmlFor="">What are your interests?</label>
-                        <div>
-                            <input type="checkbox" name="interests[]" id="interests-option-1" defaultValue={118} />Baby
-                        </div>
-                        <div>
-                            <input type="checkbox" name="interests[]" id="interests-option-2" defaultValue={118} />Cooking
-                        </div>
-                        <div>
-                            <input type="checkbox" name="interests[]" id="interests-option-3" defaultValue={118} />Crafting
-                        </div>
-                        <div>
-                            <input type="checkbox" name="interests[]" id="interests-option-4" defaultValue={118} />Decorating
-                        </div>
-                        <div>
-                            <input type="checkbox" name="interests[]" id="interests-option-5" defaultValue={118} />Electronics
-                        </div>
-                        <div>
-                            <input type="checkbox" name="interests[]" id="interests-option-6" defaultValue={118} />Fashion & Style
-                        </div>
-                        <div>
-                            <input type="checkbox" name="interests[]" id="interests-option-7" defaultValue={118} />Interior Design & Furniture
-                        </div>
-                        <div>
-                            <input type="checkbox" name="interests[]" id="interests-option-8" defaultValue={118} />Games
-                        </div>
-                        <div>
-                            <input type="checkbox" name="interests[]" id="interests-option-9" defaultValue={118} />Lighting
-                        </div>
-                        <div>
-                            <input type="checkbox" name="interests[]" id="interests-option-10" defaultValue={118} />Music
-                        </div>
-                        <div>
-                            <input type="checkbox" name="interests[]" id="interests-option-11" defaultValue={118} />Outdoors
-                        </div>
-                        <div>
-                            <input type="checkbox" name="interests[]" id="interests-option-12" defaultValue={118} />Parenting
-                        </div>
-                        <div>
-                            <input type="checkbox" name="interests[]" id="interests-option-13" defaultValue={118} />Pets
-                        </div>
-                        <div>
-                            <input type="checkbox" name="interests[]" id="interests-option-14" defaultValue={118} />Sports
-                        </div>
-                        <div>
-                            <input type="checkbox" name="interests[]" id="interests-option-15" defaultValue={118} />Travel
-                        </div>
-                        <div>
-                            <input type="checkbox" name="interests[]" id="interests-option-16" defaultValue={118} />Arts & Culture
-                        </div>
-                        <div>
-                            <input type="checkbox" name="interests[]" id="interests-option-17" defaultValue={118} />Movies & TV
-                        </div>
-                        <div>
-                            <input type="checkbox" name="interests[]" id="interests-option-18" defaultValue={118} />Food & Wine
-                        </div>
-                        <div>
-                            <input type="checkbox" name="interests[]" id="interests-option-19" defaultValue={118} />Health & Fitness
-                        </div>
-                        <div>
-                            <input type="checkbox" name="interests[]" id="interests-option-20" defaultValue={118} />Volunteering
-                        </div>
+                        {
+                            renderListInterests(listInterests)
+                        }
                     </div>
                     <div className="form-group field">
-                        <label htmlFor="">How would you classify your style?</label>
-                        <div className="control">
-                            <div>
-                                <input type="checkbox" name="style[]" id="style-option-2" defaultValue={175} />Traditional</div>
-                            <div>
-                                <input type="checkbox" name="style[]" id="style-option-3" defaultValue={178} />Rustic</div>
-                            <div>
-                                <input type="checkbox" name="style[]" id="style-option-4" defaultValue={181} />Modern</div>
-                            <div>
-                                <input type="checkbox" name="style[]" id="style-option-5" defaultValue={184} />Contemporary</div>
-                            <div>
-                                <input type="checkbox" name="style[]" id="style-option-6" defaultValue={187} />Coastal</div>
-                            <div>
-                                <input type="checkbox" name="style[]" id="style-option-7" defaultValue={190} />Vintage</div>
-                            <div>
-                                <input type="checkbox" name="style[]" id="style-option-8" defaultValue={193} />Bohemian</div>
-                        </div>
+                        {
+                            renderClassify(listClassify)
+                        }
                     </div>
                     <div classname="form-group field">
                         <label htmlfor="exampleFormControlSelect4">On average, how many outdoor torches do you buy each year?</label>
@@ -170,38 +179,10 @@ function CreateAccForm() {
                         </select>
                     </div>
                     <div className="form-group field">
-                        <label htmlFor="">To which of the following do you relate?</label>
-                        <div className="control">
-                            <div>
-                                <input type="checkbox" name="relate[]" id="relate-option-2" defaultValue={298} />Occasional Party Thrower</div>
-                            <div>
-                                <input type="checkbox" name="relate[]" id="relate-option-3" defaultValue={301} />Frequent Entertainer</div>
-                            <div>
-                                <input type="checkbox" name="relate[]" id="relate-option-4" defaultValue={304} />Backyard Griller</div>
-                            <div>
-                                <input type="checkbox" name="relate[]" id="relate-option-5" defaultValue={307} />Family Oriented</div>
-                            <div>
-                                <input type="checkbox" name="relate[]" id="relate-option-6" defaultValue={310} />Backyard Enthusiast</div>
-                            <div>
-                                <input type="checkbox" name="relate[]" id="relate-option-7" defaultValue={313} />Gardener</div>
-                        </div>
+                        {renderRelate(listRelate)}
                     </div>
                     <div className="form-group field">
-                        <label htmlFor="">What are your top sources for information and inspiration about outdoor entertaining?</label>
-                        <div className="control">
-                            <div><input type="checkbox" name="sources_of_info[]" id="sources_of_info-option-2" defaultValue={316} />Search engines/apps (Google, Bing, Yahoo, etc.)</div>
-                            <div><input type="checkbox" name="sources_of_info[]" id="sources_of_info-option-3" defaultValue={319} />Retailers' websites/apps (i.e. Amazon.com, Walmart.com, Target.com)</div>
-                            <div><input type="checkbox" name="sources_of_info[]" id="sources_of_info-option-4" defaultValue={322} />Social media (i.e. Facebook, Pinterest, Instagram, Snapchat, Twitter)</div>
-                            <div><input type="checkbox" name="sources_of_info[]" id="sources_of_info-option-5" defaultValue={325} />Video sites/apps (i.e. YouTube, Vimeo)</div>
-                            <div><input type="checkbox" name="sources_of_info[]" id="sources_of_info-option-6" defaultValue={328} />Publishers' and aggregator websites/apps (i.e. BuzzFeed, Reddit, Huffington Post, People, News sites)          </div>
-                            <div><input type="checkbox" name="sources_of_info[]" id="sources_of_info-option-7" defaultValue={331} />Magazines</div>
-                            <div><input type="checkbox" name="sources_of_info[]" id="sources_of_info-option-8" defaultValue={334} />Websites/apps for product brands</div>
-                            <div><input type="checkbox" name="sources_of_info[]" id="sources_of_info-option-9" defaultValue={337} />Television shows</div>
-                            <div><input type="checkbox" name="sources_of_info[]" id="sources_of_info-option-10" defaultValue={340} />Radio shows or podcasts</div>
-                            <div><input type="checkbox" name="sources_of_info[]" id="sources_of_info-option-11" defaultValue={343} />Blogs</div>
-                            <div><input type="checkbox" name="sources_of_info[]" id="sources_of_info-option-12" defaultValue={346} />Other mobile apps</div>
-                            <div><input type="checkbox" name="sources_of_info[]" id="sources_of_info-option-13" defaultValue={349} />Newspapers</div>
-                        </div>
+                        {renderSources(listSources)}
                     </div>
                     <div className="mb-3 field">
                         <label htmlFor="exampleFormControlTextarea1" className="form-label">Please list some of your favorite sources for outdoor entertaining news and trends.</label>
