@@ -5,7 +5,7 @@
     @media (min-width: 768px){
         .headerV1 {
             padding-top: 5px;
-            padding-bottom: 5px;
+            // padding-bottom: 5px;
         }
         .headerV1{
             box-sizing: border-box;
@@ -69,7 +69,7 @@
                     // width: 200px;
                     display: block;
                     margin: 0 auto;
-                    margin-right: 17px;
+                    margin-right: 0px;
                     input{
                         width: 250px;
                         height: 30px;
@@ -78,7 +78,7 @@
                         border-color: #FFFFFF;
                         background-color: transparent;
                         position: relative;
-                        padding: 0px 15px;
+                        padding: 0px 10px;
                         outline: none;
                         color: white;
                         &::placeholder{
@@ -88,15 +88,20 @@
                         }
                     }
                     .search-icon{
-                        color: #918484;
                         position: absolute;
                         top: 13px;
-                        right: 95px;
+                        right: 82px;
                       }
                   }
                   .cart{
+                    position: relative;
+                    top: -2px;
+                    right: -2px;
                     a{
-                        color: #fff
+                        img{
+                            width: 100%;
+                            height: 100%;
+                        }
                     }
                   }
             }
@@ -105,22 +110,39 @@
         .wlevel{
             padding: 21px 0;
         }
+        .header_logo{
+            .logo{
+               
+                img{
+                    width: 141px;
+                    height: 68px;
+                }
+            }
+        }
     }
-   
     .headerV2{
         .header_nav{
             .navbar{
                 padding-bottom: 0;
+                padding-top: 0;
+
                 .navbar-collapse{
                     .navbar-nav{
                         .nav-item{
                             // margin: 0 10px 0 0;
                             padding: 0 10px !important;
                             .nav-link{
-                                line-height: 38px;
+                                padding: 7px 0px 16px 13px;
+                              
                                 span{
-                                    color: black;
-                                    font-size: 1.2rem;
+                                    color: #575757;
+                                    line-height: 38px;
+                                    font-size: 18px;
+                                    text-shadow:#000000 0px 0px 0px;
+                                    &:hover{
+                                        color: #191919 !important;
+                                    }
+                                    
                                 }
                             }
                         }

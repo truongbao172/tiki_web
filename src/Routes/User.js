@@ -13,7 +13,7 @@ const User = (props) => {
         return (
           <div className={"content"}>
             <main>
-              <MenuOverPlayHeader />
+              {/* <MenuOverPlayHeader /> */}
               <Header />
               <Component {...propsRoute} />
               <Footer />

@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+import cart from "../../assects/images/cart.PNG"
+import search from "../../assects/images/search.PNG"
 import './styles.scss'
 const Header = () => {
     const [offset, setOffset] = useState(0);
@@ -88,16 +90,12 @@ const Header = () => {
                     <form className="search-container">
                         <input type="text" id="search-bar" placeholder="Search entire store here" />
                         <Link to="" className='search-icon'>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-search" viewBox="0 0 16 16">
-                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-                            </svg>
+                           <img src={search} alt="" />
                         </Link>
                     </form>
                     <div className='cart'>
                         <Link to="">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-cart-fill" viewBox="0 0 16 16">
-                        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
-                        </svg>
+                            <img src={cart} alt="" />
                         </Link>
                     </div>
                 </div>
@@ -105,7 +103,7 @@ const Header = () => {
             </div>
             <div className='header_logo text-center wlevel'>
                     <Link className="logo" to="/" title="TIKI Brand Logo" aria-label="TIKI Brand Logo">
-                        <img src="https://www.tikibrand.com/media/logo/stores/1/tiki-brand-logo.png" title="TIKI Brand Logo" alt="TIKI Brand Logo" width={170} height={68} />
+                        <img src="https://www.tikibrand.com/media/logo/stores/1/tiki-brand-logo.png" title="TIKI Brand Logo" alt="TIKI Brand Logo"/>
                     </Link>
             </div>
         </div>
@@ -115,6 +113,19 @@ const Header = () => {
                 <Link className="logo" to="/" title="TIKI Brand Logo" aria-label="TIKI Brand Logo">
                     <img src="https://www.tikibrand.com/media/logo/stores/1/tiki-brand-logo.png" title="TIKI Brand Logo" alt="TIKI Brand Logo" width={170} height={68} />
                 </Link>
+                {/* <div className="search">
+                    <form className="search-container">
+                        <input type="text" id="search-bar" placeholder="Search entire store here" />
+                        <Link to="" className='search-icon'>
+                           <img src={search} alt="" />
+                        </Link>
+                    </form>
+                    <div className='cart'>
+                        <Link to="">
+                            <img src={cart} alt="" />
+                        </Link>
+                    </div>
+                </div> */}
             </div>
             <div className='header_nav'>
                 <nav className="navbar navbar-expand-lg">
