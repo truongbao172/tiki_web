@@ -1,5 +1,5 @@
 .page-footer{
-    margin-top: 60px;
+    margin-top: 70px;
     // background-color: #f4f4f4;
     margin-bottom: 170px;
     width: 100%;
@@ -9,7 +9,9 @@
         padding: 0;
         width: 100%;
         .footerV1{
-            width: 95%;
+            width: 100%;
+            padding-left:36px ;
+            padding-right: 36px;
             margin:  0 auto;
             .footer-v1-content{
                 .details-v3 {
@@ -58,6 +60,11 @@
                     }
                     .si-instagram{
                         background-color: #3F729B !important;
+                        img{
+                            width: 23px;
+                            height: 23px;
+                            margin-bottom: 6px;
+                        }
                     }
                     .si-pinterest{
                         background-color: #C8232C !important;
@@ -65,6 +72,7 @@
                 }
                 .mobile-toggle{
                     .footer-v3-list{
+                        padding-left: 0;
                         li{
                             .color-tiki-red{
                             color: #cd4c21;

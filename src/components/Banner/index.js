@@ -10,7 +10,7 @@ function Banner() {
             </div>
             <div className='Banner_button text-center'>
                 <div className='Banner_text'>
-                    <span>Fall Vibes Anywhere You Want</span>
+                    <span>All the Makings of a Cozy Evening</span>
                 </div>
                 <Link to='' className='btn_shop'>SHOP NOW</Link>
             </div>

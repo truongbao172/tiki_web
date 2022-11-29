@@ -7,7 +7,7 @@ const Header = () => {
     const [offset, setOffset] = useState(0);
 
     const listNav = [{name: "MY ACCOUNT", url:"/customer"},{name: "TIKI IDEAS", url:"/ideas/"}, {name: "CUSTOMER SERVICE", url:""} ,{name: "BUYER'S GUIDE", url:""} ,{name: "FAQS", url:""}]
-    const listNav2 = [{name: "TORCHES & TABLETOP", url:"torches&tabletop"},{name: "OUTDOORLIGHTIN", url:"outdoor-lighting"}, {name: "FIRE PITS", url:"fire-pits"}, {name: "FUEL & WOOD PELLETS", url:""} ,{name: "PARTS & ACCESSORIES", url:"fuel-wood-pellets"} ,{name: "SALE", url:"sale"}]
+    const listNav2 = [{name: "TORCHES & TABLETOP", url:"torches&tabletop"},{name: "OUTDOOR LIGHTING", url:"outdoor-lighting"}, {name: "FIRE PITS", url:"fire-pits"}, {name: "FUEL & WOOD PELLETS", url:""} ,{name: "PARTS & ACCESSORIES", url:"fuel-wood-pellets"} ,{name: "SALE", url:"sale"}]
     const renderListNav = () =>{
        return <>
         <ul>
@@ -108,7 +108,7 @@ const Header = () => {
             </div>
         </div>
          
-        <div className='headerV2 text-center'>
+        <div className={`text-center ${offset > 0 ? "headerScroll" : "headerV2"} `}>
             <div className={`header_logo ${offset > 0 ? " " : "d-none"}`}>
                 <Link className="logo" to="/" title="TIKI Brand Logo" aria-label="TIKI Brand Logo">
                     <img src="https://www.tikibrand.com/media/logo/stores/1/tiki-brand-logo.png" title="TIKI Brand Logo" alt="TIKI Brand Logo" width={170} height={68} />

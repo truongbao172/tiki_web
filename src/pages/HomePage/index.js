@@ -8,7 +8,7 @@ const Home = () => {
     <div className='homePage'>
       <Banner/>
       <ListCard/>
-      <IdeasPost/>
+      <IdeasPost seeProduct/>
     </div>
   )
 }

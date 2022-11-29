@@ -1,6 +1,8 @@
 .cardHomePage{
+    margin-bottom: 60px;
     .cart_content{
         .homepage-cta-img{
+            padding-right: 0;
             img{
                 box-shadow: -10px 10px 0px 0px #f7b917;
                 width: 100%;
@@ -15,13 +17,23 @@
                 font-size: 24px;
                 font-weight: 900;
                 line-height: 1.42857143;
-                margin: 25px 0px 20px;
+                margin: 21px 0px 14px;
                 text-transform: uppercase;
+                font-family: 'Cantarell',sans-serif;
+                // letter-spacing: -1px;
+                font-style: normal;
             }
             p{
                 font-size: 18px;
                 line-height: 26px;
                 margin: 0px 0px 10px;
+            }
+            .des{
+                margin-bottom: 30px;
+                width: 99%;
+            }
+            .but{
+                margin-bottom: 30px;
             }
             .anchor-tiki-black{
                 p{
@@ -31,12 +43,20 @@
                     span{
                         font-size: 18px;
                         line-height: 25px;
-                        padding-right: 0.25rem;
+                        padding-right: 0.4rem;
+                        // letter-spacing: -1px;
                     }
                     a{
                         color: #000;
                     }
                 }
+            }
+        }
+    }
+    .img-shadow{
+        .homepage-cta-img{
+            img{
+                box-shadow: 10px 10px 0px 0px #f7b917
             }
         }
     }
