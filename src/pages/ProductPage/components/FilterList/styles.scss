@@ -2,6 +2,7 @@
     .acc_filter{
         .accordion-button{
             border: none;
+            background: #f7f7f7;
             padding-left: 0 !important;
             font-size: 18px;
             font-weight: 700;
@@ -15,8 +16,11 @@
             }
         }
         .accordion-button:not(.collapsed){
-            background-color: none;
+            background: #f7f7f7;
             color: black;
+        }
+        .accordion-collapse{
+            background: #f7f7f7;
         }
 
    

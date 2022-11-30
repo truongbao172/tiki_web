@@ -19,12 +19,12 @@
     }
     .activeNav{
         background-color: #f7b917;
-        padding: 6px;
+        padding: 1px 10px 6px 10px;
         color: black !important;
     }
     .active{
         background-color: #f7b917;
-        padding: 6px;
+        padding: 1px 10px 6px 10px;
     }
     .header_top{
         .headerV1{
@@ -208,4 +208,8 @@
             }
         }
     }
+  
+}
+.sethight{
+    height: 270px;
 }

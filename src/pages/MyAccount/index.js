@@ -1,23 +1,15 @@
 import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import Beadcrumb from '../../components/Beadcrumb'
-import ReCAPTCHA from 'react-google-recaptcha'
+import chapcha from "../../assects/images/capcha.PNG"
 import "./styles.scss"
 const MyAccount = () => {
     const beadcrumbProp = [{name:'HOME',status:'',url:'/'},{name:'ACCOUNT SIGN IN',status:'ACTIVE',url:'/customer'}]
     const onchange = ()=>{
     }
-    const renderCapcha = () =>{
-      return <>
-        <ReCAPTCHA
-                  sitekey="6LcVbSwjAAAAAC52XnQZj8ZF7KdJGZGIyz2T_JKS"
-                  onChange={onchange()}
-        />
-      </>
-    }
+
     useEffect(()=>{
-      console.log("he")
-      renderCapcha()
+
     })
     return (
       <div id="myAccount">
@@ -42,7 +34,7 @@ const MyAccount = () => {
                   <input type="password" className="form-control" placeholder="" />
                 </div>
                 <div className='py-3'>
-                {renderCapcha()}
+                  <img src={chapcha} alt="" />
                 </div>
                 <div className='btn_login d-flex align-items-center'>
                   <button type="submit" className="btn btn_oran">SIGN IN</button>

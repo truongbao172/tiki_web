@@ -1,7 +1,7 @@
 .page-footer{
-    margin-top: 70px;
-    // background-color: #f4f4f4;
-    margin-bottom: 170px;
+    margin-top: 40px;
+    background-color: transparent;
+    padding-bottom: 128px;
     width: 100%;
     z-index: 0;
     .footer{
@@ -10,7 +10,8 @@
         width: 100%;
         .footerV1{
             width: 100%;
-            padding-left:36px ;
+            padding: 26px 0px;
+            padding-left: 36px;
             padding-right: 36px;
             margin:  0 auto;
             .footer-v1-content{
@@ -20,13 +21,21 @@
                     margin:0px 0px 10px;
                 }
                 .list_page{
+                    margin-bottom: 11px;
                    a{
                     color: black;
                     font-size: 18px;
                     line-height:25.7143px ;
+                    // margin-right: 5px;
                     &:hover{
                         text-decoration: underline;
                     }
+                   }
+                   span{
+                    padding-left: 5px;
+                    margin-right: 5px;
+                    font-size: 18px;
+                    display: inline;
                    }
                 }
                 .list_hashTag{
@@ -36,10 +45,14 @@
                         line-height: 25px;
                         margin:  0px 10px 0px 0px;
                     }
+                    .mr-right{
+
+                    }
                 }
                 .mg-mobile{
+                    margin-bottom: 5px;
                     .social-icons {
-                        margin: 0 5px 5px 0;
+                        margin-right: 10px;
                         width: 40px ;
                         height: 40px ;
                         font-size: 20px;
@@ -62,7 +75,7 @@
                         background-color: #3F729B !important;
                         img{
                             width: 23px;
-                            height: 23px;
+                            height: 21px;
                             margin-bottom: 6px;
                         }
                     }
@@ -71,8 +84,13 @@
                     }
                 }
                 .mobile-toggle{
+                    padding-left: 11px;
+                    .item{
+                        margin-bottom: 5px;
+                        font-size: 18px;
+                    }
                     .footer-v3-list{
-                        padding-left: 0;
+                        padding-left: 5px;
                         li{
                             .color-tiki-red{
                             color: #cd4c21;
@@ -86,6 +104,9 @@
                             }
                         }
                     }
+                }
+                .mg_l{
+                    // padding-left: 5px;
                 }
                
             }

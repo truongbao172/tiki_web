@@ -78,6 +78,7 @@ const Header = () => {
 
      
   return (
+    <div>
     <div className={`header ${offset > 0 ? "fixed-top" : " "}`}>
         <div  className={`header_top ${offset > 0 ? "d-none" : " "}`}>
             <div className='headerV1 content'>
@@ -138,6 +139,9 @@ const Header = () => {
             </div>
         </div>
     </div>
+    <div className={`${offset > 0 ? "sethight" : ""} `}>
+    </div>
+</div>
   )
 }
 

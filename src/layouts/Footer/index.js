@@ -13,7 +13,7 @@ const Footer = () => {
       <ul className="footer-v3-list">
         {
           data.map((item, index) => {
-            return <li key={index} className="mb-2"><Link href="" aria-label={item} title={item} className="color-tiki-red">{item}</Link></li>
+            return <li key={index} className="item"><Link href="" aria-label={item} title={item} className="color-tiki-red">{item}</Link></li>
           })
         }
 
@@ -27,10 +27,10 @@ const Footer = () => {
           <div className="footer-v1-content row flex-md-nowrap">
             <div className="col-md-6 col-sm-12 col-xs-12 mobile-toggle address-v3">
               <div>
-                <p className="details-v3 mb-3">
+                <p className="details-v3">
                   ©2022 LAMPLIGHT FARMS INC. All Rights Reserved.
                 </p>
-                <p className="list_page mb-3">
+                <p className="list_page">
                   <Link href="" title="Privacy Notice">
                     Privacy
                   </Link>
@@ -62,17 +62,17 @@ const Footer = () => {
                     <i className="fa-brands fa-pinterest-p"></i>
                   </Link>
                 </div>
-                <p className="list_hashTag mb-3">
-                  <span className="mr-3" aria-label="hashtag Tiki Brand">
+                <p className="list_hashTag ">
+                  <span className="mr-right" aria-label="hashtag Tiki Brand">
                     #TIKIBrand
                   </span>
-                  <span className="mr-3" aria-label="hashtag Tiki Fire Pit">
+                  <span className="mr-right" aria-label="hashtag Tiki Fire Pit">
                     #TIKIFirePit
                   </span>
                 </p>
               </div>
             </div>
-            <div className="col-md-6 col-sm-12 col-xs-12">
+            <div className="col-md-6 col-sm-12 col-xs-12 mg_l">
               <div className="row"> 
                   <div className="col-6 mobile-toggle">
                     {renderFooterList(list1)}
