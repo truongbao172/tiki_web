@@ -6,10 +6,10 @@
     color: black;
     .breadcrumb-item+.breadcrumb-item::before {
         float: left;
-        padding-right: var(--bs-breadcrumb-item-padding-x);
+        padding-right: 11px;
         color: black;
-        font-size: 18px;
-        content: var(--bs-breadcrumb-divider, ">");
+        font-size: 14px;
+        content: ">";
     }
     .breadcrumb-item{
         a{
@@ -21,5 +21,8 @@
     a.active{
         color: #000000;
         text-decoration: none;
+    }
+    .theme-pearl.store-view-default .breadcrumbs .item:not(:last-child):after{
+        padding-left: 17px !important;
     }
 }

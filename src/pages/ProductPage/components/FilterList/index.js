@@ -70,7 +70,7 @@ const FilterList = () => {
                             <ul>
                                 {
                                     item.listItem.map((value, index) => {
-                                    return <li>{value.name}</li>
+                                    return <li><span>{value.name}</span></li>
                                     })
                                 }
                             </ul>
@@ -85,6 +85,10 @@ const FilterList = () => {
         <div id='filterList'>
             <div className="accordion acc_filter" id="accordionFilter">
                 {renderListFilter()}
+            </div>
+            <div className='wish'>
+                <h2>MY WISH LIST</h2>
+                <span>You have no items in your wish list.</span>
             </div>
 
         </div>

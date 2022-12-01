@@ -1,0 +1,16 @@
+#productPage{
+    margin-top: 15px;
+    .product_content{
+        width: 100%;
+        .left{
+           width: 20.83333333%;
+           padding-right: 0;
+           float: left;
+        }
+        .right{
+            width: 79.16666667%;
+            padding-left: 56px;
+            margin-top: 7px;
+        }
+    }
+}
