@@ -7,6 +7,7 @@ import CreateAccount from './pages/CreateAccount';
 import TikiIdeas from './pages/TikiIdeas';
 import ProductPage from './pages/ProductPage';
 function App() {
+
   return (
     <div>
       <main>

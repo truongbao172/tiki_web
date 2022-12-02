@@ -4,11 +4,18 @@ import "./style.scss"
 const ListPost = () => {
   return (
     <div id='listPost'>
-        <IdeasPost/>
-        <IdeasPost revert/>
-        <IdeasPost seeProduct/>
-        <IdeasPost revert/>
-
+      <div className='pading'>
+        <IdeasPost />
+      </div>
+      <div className='pading'>
+        <IdeasPost revert />
+      </div>
+      <div className='pading'>
+        <IdeasPost seeProduct />
+      </div>
+      <div className='pading'>
+        <IdeasPost revert />
+      </div>
     </div>
   )
 }

@@ -51,7 +51,52 @@ const FilterList = () => {
                 { name: "Torches & Tabletop 2" },
             ]
 
-        }
+        },
+        {
+            id:"item6",
+            title: 'FEATURES',
+            listItem: [
+                { name: "Torches & Tabletop" },
+                { name: "Torches & Tabletop 1" },
+                { name: "Torches & Tabletop 2" },
+            ]
+        },
+        {
+            id:"item8",
+            title: 'PRICE',
+            listItem: [
+                { name: "Torches & Tabletop" },
+                { name: "Torches & Tabletop 1" },
+                { name: "Torches & Tabletop 2" },
+            ]
+        },
+        {
+            id:"item9",
+            title: 'MATERIAL',
+            listItem: [
+                { name: "Torches & Tabletop" },
+                { name: "Torches & Tabletop 1" },
+                { name: "Torches & Tabletop 2" },
+            ]
+        },
+        {
+            id:"item10",
+            title: 'AVAILABILITY',
+            listItem: [
+                { name: "Torches & Tabletop" },
+                { name: "Torches & Tabletop 1" },
+                { name: "Torches & Tabletop 2" },
+            ]
+        },
+        {
+            id:"item11",
+            title: 'CUSTOMER RATING',
+            listItem: [
+                { name: "Torches & Tabletop" },
+                { name: "Torches & Tabletop 1" },
+                { name: "Torches & Tabletop 2" },
+            ]
+        },
 
 
     ]

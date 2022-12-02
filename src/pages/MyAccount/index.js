@@ -13,7 +13,9 @@ const MyAccount = () => {
     })
     return (
       <div id="myAccount">
+        <div className='bcrumAcc'>
         <Beadcrumb beadcrumbProp={beadcrumbProp}/>
+        </div>
         <div className='myAccount_title text-center mb-5'>
           <h1>ACCOUNT SIGN IN</h1>
         </div>

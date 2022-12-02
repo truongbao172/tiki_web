@@ -34,7 +34,7 @@ const Card = () => {
             <div className='price text-center'>
               $20.49
             </div>
-            <div className='btn_add_to_card text-center'>
+            <div className='btn_add_to_card text-center btn_card_product'>
               <a href="" className='btn btn_oran'>ADD TO CART</a>
             </div>
 

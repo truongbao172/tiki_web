@@ -91,11 +91,11 @@ function CreateAccForm() {
                     </legend>
                     <div className="form-group field">
                         <label>First Name <span className='doc'>*</span></label>
-                        <input type="text" className="form-control" />
+                        <input placeholder="First Name" type="text" className="form-control" />
                     </div>
                     <div className="form-group field">
                         <label>Last Name <span className='doc'>*</span></label>
-                        <input type="text" className="form-control" />
+                        <input placeholder="Last Name" type="text" className="form-control" />
                     </div>
                     <div className="form-group field">
                         <input type="checkbox" id="exampleCheck1" />
