@@ -2,15 +2,25 @@ import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import Beadcrumb from '../../components/Beadcrumb'
 import chapcha from "../../assects/images/capcha.PNG"
+import { useFormik } from "formik";
 import "./styles.scss"
+import { useDispatch } from 'react-redux';
+import { LoginAction } from '../../redux/actions';
 const MyAccount = () => {
     const beadcrumbProp = [{name:'HOME',status:'',url:'/'},{name:'ACCOUNT SIGN IN',status:'ACTIVE',url:'/customer'}]
-    const onchange = ()=>{
-    }
-
-    useEffect(()=>{
-
-    })
+    const dispatch = useDispatch();
+   
+    const formik = useFormik({
+      initialValues: {
+        email: "",
+        password: "",
+      },
+      onSubmit: (values) => {
+        const action = LoginAction(values);
+        dispatch(action);
+        console.log("values", values);
+      },
+    });
     return (
       <div id="myAccount">
         <div className='bcrumAcc'>
@@ -22,24 +32,24 @@ const MyAccount = () => {
         <div className="main row">
           <div className="col-md-6 col-12">
             <div className="login-form">
-              <form>
+              <form onSubmit={formik.handleSubmit}>
                 <div className="login_form_tilte">
                   <h2 className='block-new-customer-heading'>SIGN IN</h2>
                   <p className='p_title'>If you have an account, sign in with your email address.</p>
                 </div>
                 <div className="form-group">
                   <label>Email <span className='doc'>*</span></label>
-                  <input type="text" className="form-control" placeholder="" />
+                  <input id="email" onChange={formik.handleChange} type="email" className="form-control" placeholder="" />
                 </div>
                 <div className="form-group">
                   <label>Password <span className='doc'>*</span></label>
-                  <input type="password" className="form-control" placeholder="" />
+                  <input id="password" onChange={formik.handleChange} type="password" className="form-control" placeholder="" />
                 </div>
                 <div className='py-3'>
                   <img src={chapcha} alt="" />
                 </div>
                 <div className='btn_login d-flex align-items-center'>
-                  <button type="submit" className="btn btn_oran">SIGN IN</button>
+                  <button type="submit" className="btn btn_oran" >SIGN IN</button>
                   <h5>Forgot Your Password?</h5>
                 </div>
               </form>

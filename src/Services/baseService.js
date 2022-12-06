@@ -1,42 +1,51 @@
-import Axios from "axios";
-
-const headers = {
-  Authorization: "Bearer " + localStorage.getItem("ACCESS_TOKEN"),
-};
+import axios from "axios";
+import { DOMAIN, token } from "../util/config";
 
 export class baseService {
-  //put json về phía backend
-  put = (url, model) => {
-    return Axios({
-      url: `${"DOMAIN"}${url}`,
-      method: "PUT",
-      data: model,
-      headers: { ...headers }, //JWT
-    });
-  };
-
-  post = (url, model) => {
-    return Axios({
-      url: `${"DOMAIN"}${url}`,
-      method: "POST",
-      data: model,
-      headers: { ...headers }, //JWT
-    });
-  };
-
   get = (url) => {
-    return Axios({
-      url: `${"DOMAIN"}${url}`,
-      method: "GET",
-      headers: { ...headers }, //token yêu cầu từ backend chứng minh user đã đăng nhập rồi
+    if (token) {
+      return axios({
+        url: `${DOMAIN}/${url}`,
+        method: "GET",
+        headers: {
+          Authorization: `Bearer ${token()}`,
+        },
+      });
+    }
+  };
+
+  post = (url, userData) => {
+    return axios({
+      url: `${DOMAIN}/${url}`,
+      method: "POST",
+      data: userData,
+      headers: {
+        Authorization: `Bearer ${token()}`,
+      },
     });
   };
 
-  delete = (url) => {
-    return Axios({
-      url: `${"DOMAIN"}${url}`,
+  delete = (url, id) => {
+    return axios({
+      url: `${DOMAIN}/${url}`,
       method: "DELETE",
-      headers: { ...headers }, //token yêu cầu từ backend chứng minh user đã đăng nhập rồi
+      params: id,
+      headers: {
+        Authorization: `Bearer ${token()}`,
+      },
     });
   };
+
+  put = (url, formData) => {
+    return axios({
+      url: `${DOMAIN}/${url}`,
+      method: "PUT",
+      data: formData,
+      headers: {
+        Authorization: `Bearer ${token()}`,
+      },
+    });
+  };
+
 }
+

@@ -24,11 +24,13 @@
         background-color: #f7b917;
         padding: 6px 10px 6px 10px;
         color: black !important;
+        overflow: hidden;
     }
 
     .active {
         background-color: #f7b917;
-        padding: 6px 10px 6px 10px;
+        
+        overflow: hidden;
     }
 
     .header_top {
@@ -148,19 +150,24 @@
 
                 .navbar-collapse {
                     .navbar-nav {
+                        padding-bottom: 8px;
                         .nav-item {
                             // margin: 0 10px 0 0;
-                            padding: 0 13px !important;
-
+                            padding: 0 5px !important;
+                           
+                    
                             .nav-link {
-                                padding: 6px 0px 15px 2px;
+                                padding-left: 0 !important;
+                                padding-right: 0 !important;
+                                
 
                                 span {
                                     color: #575757;
                                     line-height: 38px;
                                     font-size: 18px;
                                     text-shadow: #000000 0px 0px 0px;
-
+                                    width: 226px;
+                                    padding: 6px 10px 6px 10px ;
                                     &:hover {
                                         color: #191919 !important;
                                     }

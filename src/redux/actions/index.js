@@ -1,13 +1,28 @@
-import {FETCH_POST_REQUEST,FETCH_POST_SUCCESS,FETCH_POST_ERROR} from "../constans/index.js"
-
-export const loadPost = () => async dispatch =>{
-    try {
-        dispatch({
-            type: FETCH_POST_REQUEST
-        })
-        //xu ly lenh
+import { userService } from "../../Services/UserService.js";
+import {LOGIN_ACTION} from "../constants"
+import { history } from "../../App";
+export const LoginAction = (value) => {
+    return async (dispatch) => {
+      try {
         
-    } catch (error) {
-        console.log(error)
-    }
-}
+        const result = await userService.Login(value);
+        console.log("action", result.data)
+        if (result.data.status === "OK") {
+            console.log("do ham")
+            localStorage.setItem("token", result.data.data.access_token);
+          dispatch({
+            type: LOGIN_ACTION,
+            data: result.data.data,
+          });
+          alert("login success")
+          //Chuyển hướng đăng nhập về trang trước đó
+          history.back();
+        }else{
+            alert(result.data.message)
+        }
+        
+      } catch (error) {
+        console.log(error);
+      }
+    };
+  };
