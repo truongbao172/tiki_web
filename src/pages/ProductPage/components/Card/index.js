@@ -1,6 +1,21 @@
 import React from 'react'
 import "./styles.scss"
-const Card = () => {
+const Card = (props) => {
+  const { data } = props
+  const { status, category, description, image, name, price, quatity, rating } = data
+  console.log("card", data)
+
+  const renderStar = (star) =>{
+    return (
+      <>
+        {[...Array(star)].map((star) => {        
+          return (         
+            <i className="fa-sharp fa-solid fa-star"></i>       
+          );
+        })}
+      </>
+    );
+  }
   return (
     <div className='card-item-product'>
       <div className='item product product-item'>
@@ -17,27 +32,22 @@ const Card = () => {
           </div>
           <div className='product-item-details'>
             <div className='name_card text-center'>
-              <a href=""><h3>ISLAND KING LARGE FLAME TORCH WITH EASY INSTALL IN BLACK</h3></a>
+              <a href=""><h3>{name}</h3></a>
             </div>
             <div className='rating-star d-flex'>
               <div className='star-vote'>
-              <i className="fa-sharp fa-solid fa-star"></i>
-              <i className="fa-sharp fa-solid fa-star"></i>
-              <i className="fa-sharp fa-solid fa-star"></i>
-              <i className="fa-sharp fa-solid fa-star"></i>
-              <i className="fa-sharp fa-solid fa-star"></i>
+                {renderStar(rating)}
               </div>
               <div className='cout-vote'>
-                  (56)
+                ({quatity})
               </div>
             </div>
             <div className='price text-center'>
-              $20.49
+              ${price}
             </div>
             <div className='btn_add_to_card text-center btn_card_product'>
               <a href="" className='btn btn_oran'>ADD TO CART</a>
             </div>
-
           </div>
         </div>
       </div>

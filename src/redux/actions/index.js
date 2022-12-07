@@ -1,6 +1,7 @@
 import { userService } from "../../Services/UserService.js";
-import {LOGIN_ACTION} from "../constants"
+import {GET_ALL_PRODUCT, LOGIN_ACTION} from "../constants"
 import { history } from "../../App";
+import { productService } from "../../Services/ProductService.js";
 export const LoginAction = (value) => {
     return async (dispatch) => {
       try {
@@ -19,6 +20,27 @@ export const LoginAction = (value) => {
           history.back();
         }else{
             alert(result.data.message)
+        }
+        
+      } catch (error) {
+        console.log(error);
+      }
+    };
+  };
+
+  export const getAllProductAction = () => {
+    return async (dispatch) => {
+      try {
+        
+        const result = await productService.getAllProduct();
+        console.log("listpriduct", result.data.data.status)
+        if (result.data.data.status === "OK") {
+          dispatch({
+            type: GET_ALL_PRODUCT,
+            data: result.data.data.data,
+          });
+        }else{
+          console.log("err")
         }
         
       } catch (error) {

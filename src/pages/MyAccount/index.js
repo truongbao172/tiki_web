@@ -57,7 +57,7 @@ const MyAccount = () => {
           </div>
           <div className='col-md-6 col-12'>
             <div>
-              <h2 class="block-new-customer-heading" role="heading">Sign Up</h2>
+              <h2 className="block-new-customer-heading" role="heading">Sign Up</h2>
             </div>
             <div className="block-content">
               <p className='p_title'>Creating an account has many benefits: check out faster, keep more than one address, track orders and more.</p>

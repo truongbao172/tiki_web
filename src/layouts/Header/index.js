@@ -6,9 +6,9 @@ import $ from 'jquery'
 import './styles.scss'
 const Header = () => {
     const [offset, setOffset] = useState(0);
-
     const listNav = [{ name: "MY ACCOUNT", url: "/customer" }, { name: "TIKI IDEAS", url: "/ideas/" }, { name: "CUSTOMER SERVICE", url: "" }, { name: "BUYER'S GUIDE", url: "" }, { name: "FAQS", url: "" }]
-    const listNav2 = [{ name: "TORCHES & TABLETOP", url: "torches&tabletop" }, { name: "OUTDOOR LIGHTING", url: "outdoor-lighting" }, { name: "FIRE PITS", url: "fire-pits" }, { name: "FUEL & WOOD PELLETS", url: "fuel-wood-pellets" }, { name: "PARTS & ACCESSORIES", url: "fuel-wood-pellets" }, { name: "SALE", url: "sale" }]
+    const listNav2 = [{ name: "TORCHES & TABLETOP", url: "torches" }, { name: "OUTDOOR LIGHTING", url: "outdoor-lighting" }, { name: "FIRE PITS", url: "fire-pits" }, { name: "FUEL & WOOD PELLETS", url: "fuel-wood-pellets" }, { name: "PARTS & ACCESSORIES", url: "fuel-wood-pellets" }, { name: "SALE", url: "sale" }]
+   
     const renderListNav = () => {
         return <>
             <ul>

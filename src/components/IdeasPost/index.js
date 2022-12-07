@@ -23,7 +23,7 @@ function IdeasPost({revert, seeProduct}) {
             Take your football party outside and watch the game on an outdoor screen in your backyard! Get the space ready by giving the lawn a fresh cut, have plenty of seating and add several torches for lighting. Fire up the grill for burgers or hot dogs, and don't forget the snacks and handheld sweets!
             </p>
             <p className="tiki-idea-post-tags text-uppercase">
-              Topics:<Link className="ideas-tags" to=""><span clasName="ideas-filters-option-outdoor-living-everyday"> EASY ENTERTAINING</span></Link><Link className="ideas-tags" to="/ideas/?cat=ideas-filters-option-space-backyard"><span class="ideas-filters-option-space-backyard">, Backyard</span></Link></p>
+              Topics:<Link className="ideas-tags" to=""><span className="ideas-filters-option-outdoor-living-everyday"> EASY ENTERTAINING</span></Link><Link className="ideas-tags" to="/ideas/?cat=ideas-filters-option-space-backyard"><span className="ideas-filters-option-space-backyard">, Backyard</span></Link></p>
             {seeProduct && <a href="" className='btn set-border button-black'>SEE PRODUCT</a>}
           </div>
         </div>
