@@ -10,7 +10,7 @@ export class UserService extends baseService {
     return this.post(`user/login`, info);
   };
   SignUp = (info) => {
-    return this.post(`/`, info);
+    return this.post(`user`, info);
   };
 }
 

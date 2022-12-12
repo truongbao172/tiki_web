@@ -17,7 +17,7 @@ const ListCard = (props) => {
         {
           dataOfCategory.length > 0 ? <div className='row'>
           {renderListCard()}
-        </div> : "NO DATA"
+        </div> : <div className='text-center'><h2>NO DATA</h2></div>
         }
     </div>
   )

@@ -4,11 +4,20 @@ import cart from "../../assects/images/cart.PNG"
 import search from "../../assects/images/search.PNG"
 import $ from 'jquery'
 import './styles.scss'
-const Header = () => {
+import { useDispatch, useSelector } from 'react-redux'
+import { getAllCategoryAction } from '../../redux/actions'
+const Header = (props) => {
+    const dataNav = props.dataNav
     const [offset, setOffset] = useState(0);
     const listNav = [{ name: "MY ACCOUNT", url: "/customer" }, { name: "TIKI IDEAS", url: "/ideas/" }, { name: "CUSTOMER SERVICE", url: "" }, { name: "BUYER'S GUIDE", url: "" }, { name: "FAQS", url: "" }]
-    const listNav2 = [{ name: "TORCHES & TABLETOP", url: "torches" }, { name: "OUTDOOR LIGHTING", url: "outdoor-lighting" }, { name: "FIRE PITS", url: "fire-pits" }, { name: "FUEL & WOOD PELLETS", url: "fuel-wood-pellets" }, { name: "PARTS & ACCESSORIES", url: "fuel-wood-pellets" }, { name: "SALE", url: "sale" }]
-   
+    const listNav2 = [{ name: "TORCHES & TABLETOP", url: "torches" }, { name: "OUTDOOR LIGHTING", url: "outdoor-lighting" }, { name: "FIRE PITS", url: "fire-pits" }, { name: "FUEL & WOOD PELLETS", url: "fuel-wood-pellets" }, { name: "PARTS & ACCESSORIES", url: "parts-accessories" }, { name: "SALE", url: "sale" }]
+    
+    const dispatch = useDispatch();
+    const action = getAllCategoryAction();
+    useEffect(() => {
+        console.log("x")
+        dispatch(action);
+      },[])
     const renderListNav = () => {
         return <>
             <ul>
@@ -46,9 +55,9 @@ const Header = () => {
     const renderListNav2 = () => {
         return <>
             <ul className="navbar-nav me-auto mb-2 mb-lg-0 mx-auto">
-                {listNav2.map(item => {
+                {dataNav.map(item => {
                     return <li className="nav-item">
-                        <Link onBlur={(e) => { clickOut(e) }} className="nav-link" to={`/product/${item.url}`}>
+                        <Link onBlur={(e) => { clickOut(e) }} className="nav-link" to={`/product/${item.ids}`}>
                             <span onClick={(e) => { handelClick(e) }}>
                                 {item.name}
                             </span>

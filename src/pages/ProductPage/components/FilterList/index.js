@@ -3,98 +3,114 @@ import "./styles.scss"
 const FilterList = () => {
     const listFilter = [
         {
-            id:"item1",
+            id: "item1",
             title: 'CATEGORY',
+            search: false,
             listItem: [
                 { name: "Torches & Tabletop" },
-                { name: "Torches & Tabletop 1" },
-                { name: "Torches & Tabletop 2" },
             ]
 
         },
         {
-            id:"item2",
+            id: "item2",
             title: 'PRODUCT TYPES',
+            search: false,
             listItem: [
-                { name: "Torches & Tabletop" },
-                { name: "Torches & Tabletop 1" },
-                { name: "Torches & Tabletop 2" },
+                { name: "Candle" },
+                { name: "Kit/Combo" },
+                { name: "Table Torch" },
+                { name: "TIKI Torch" },
+                { name: "Torch Fuel" },
             ]
 
         },
         {
-            id:"item3",
+            id: "item3",
             title: 'PACKS',
+            search: true,
             listItem: [
-                { name: "Torches & Tabletop" },
-                { name: "Torches & Tabletop 1" },
-                { name: "Torches & Tabletop 2" },
+                { name: "Kit/Combo" },
+                { name: "Multipack" },
             ]
 
         },
         {
-            id:"item4",
+            id: "item4",
             title: 'COLOR',
+            search: false,
             listItem: [
-                { name: "Torches & Tabletop" },
-                { name: "Torches & Tabletop 1" },
-                { name: "Torches & Tabletop 2" },
+                { name: "null" },
             ]
 
         },
         {
-            id:"item5",
+            id: "item5",
             title: 'STYLE',
+            search: true,
             listItem: [
-                { name: "Torches & Tabletop" },
-                { name: "Torches & Tabletop 1" },
-                { name: "Torches & Tabletop 2" },
+                { name: "Americana" },
+                { name: "Classic TIKI" },
+                { name: "Coastal/Nautical" },
+                { name: "Modern" },
+                { name: "Rustic" },
+                { name: "Traditional" },
+                { name: "Tropical" },
             ]
 
         },
         {
-            id:"item6",
+            id: "item6",
             title: 'FEATURES',
+            search: true,
             listItem: [
-                { name: "Torches & Tabletop" },
-                { name: "Torches & Tabletop 1" },
-                { name: "Torches & Tabletop 2" },
+                { name: "Adjustable Flame" },
+                { name: "Contains Citronella" },
+                { name: "Convertible" },
+                { name: "Deck Clamp Included" },
+                { name: "Easy Installation" },
+                { name: "Large Flame" },
+                { name: "Less Soot & Smoke" },
+                { name: "New" },
+                { name: "Repels Mosquitoes" },
+                { name: "Weather Resistant" },
+                { name: "Wide Mouth Can" },
             ]
         },
         {
-            id:"item8",
-            title: 'PRICE',
-            listItem: [
-                { name: "Torches & Tabletop" },
-                { name: "Torches & Tabletop 1" },
-                { name: "Torches & Tabletop 2" },
-            ]
-        },
-        {
-            id:"item9",
+            id: "item8",
             title: 'MATERIAL',
+            search: true,
             listItem: [
-                { name: "Torches & Tabletop" },
-                { name: "Torches & Tabletop 1" },
-                { name: "Torches & Tabletop 2" },
+                { name: "Bamboo" },
+                { name: "Glass" },
+                { name: "Metal" },
+                { name: "Resin" },
             ]
         },
         {
-            id:"item10",
+            id: "item9",
+            title: 'PRICE',
+            search: false,
+            listItem: [
+                { name: "null" },
+            ]
+        },
+        {
+            id: "item10",
             title: 'AVAILABILITY',
+            search: false,
             listItem: [
-                { name: "Torches & Tabletop" },
-                { name: "Torches & Tabletop 1" },
-                { name: "Torches & Tabletop 2" },
+                { name: "Available Online" },
+                { name: "In Store Only" },
             ]
         },
         {
-            id:"item11",
+            id: "item11",
             title: 'CUSTOMER RATING',
+            search: false,
             listItem: [
-                { name: "Torches & Tabletop" },
-                { name: "Torches & Tabletop 1" },
-                { name: "Torches & Tabletop 2" },
+                { name: "★★★★ & up" },
+                { name: "★★★★★" },
             ]
         },
 
@@ -103,26 +119,29 @@ const FilterList = () => {
     const renderListFilter = () => {
         return listFilter.map((item, index) => {
             return <>
-            <div className="accordion-item" key={index}>
-                <h2 className="accordion-header" id={`id${item.id}`}>
-                    <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target={`#${item.id}`} aria-expanded="true" aria-controls={item.id}>
-                        {item.title}
-                    </button>
-                </h2>
-                <div id={item.id} className="accordion-collapse collapse" aria-labelledby={`id${item.id}`} data-bs-parent={`#${item.id}`}>
-                    <div className="accordion-body">
-                        <div className='list_item_filter'>
-                            <ul>
-                                {
-                                    item.listItem.map((value, index) => {
-                                    return <li><span>{value.name}</span></li>
-                                    })
-                                }
-                            </ul>
+                <div className="accordion-item" key={index}>
+                    <h2 className="accordion-header" id={`id${item.id}`}>
+                        <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target={`#${item.id}`} aria-expanded="true" aria-controls={item.id}>
+                            {item.title}
+                        </button>
+                    </h2>
+                    <div id={item.id} className="accordion-collapse collapse" aria-labelledby={`id${item.id}`} data-bs-parent={`#${item.id}`}>
+                        <div className="accordion-body">
+                            {item.search && <div className='searchFilter'>
+                                <input type="text" className='inputSearch' placeholder="Search for options ..." title="Search for options ..." />
+                            </div>}
+                            <div className='list_item_filter'>
+                                <ul>
+                                    {
+                                        item.listItem.map((value, index) => {
+                                            return <li><span>{value.name}</span></li>
+                                        })
+                                    }
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
             </>
         })
     }

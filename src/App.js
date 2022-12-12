@@ -13,10 +13,10 @@ import { useEffect } from 'react';
 export const history = createBrowserHistory();
 
 function App() {
-  const UserInfo = useSelector((state) => state.UserReducer.userLogin);
+  
   const getAllProduct = useSelector((state) => state.ProductReducer.getAllProduct);
   console.log("getAllProduct", getAllProduct)
-  console.log("UserInfo", UserInfo)
+  
   const dispatch = useDispatch();
   const action = getAllProductAction();
   useEffect(() => {

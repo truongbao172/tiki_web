@@ -3,7 +3,6 @@ import "./styles.scss"
 const Card = (props) => {
   const { data } = props
   const { status, category, description, image, name, price, quatity, rating } = data
-  console.log("card", data)
 
   const renderStar = (star) =>{
     return (
@@ -23,7 +22,7 @@ const Card = (props) => {
           <div className='product_image'>
             <div className='image'>
               <a href="">
-                <img src="https://www.tikibrand.com/media/catalog/product/cache/77687483e7a6bfac08ae1e13eb6dacb4/1/3/132b290c3d686f40146d6d904a240900.jpg" alt="" />
+                <img src={image} alt="" />
               </a>
             </div>
             <div className='heart'>
