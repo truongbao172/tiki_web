@@ -15,7 +15,7 @@ const Home = () => {
     <div className='homePage'>
       <Banner/>
       <ListCard/>
-      <IdeasPost seeProduct/>
+      <IdeasPost data/>
     </div>
   )
 }
