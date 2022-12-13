@@ -1,8 +1,9 @@
 import { userService } from "../../Services/UserService.js";
-import {GET_ALL_CATEGORY, GET_ALL_DEMO_CATEGORY, GET_ALL_PRODUCT, LOGIN_ACTION} from "../constants"
+import {GET_ALL_CARD_IDEAS , GET_ALL_DEMO_CATEGORY, GET_ALL_PRODUCT, LOGIN_ACTION} from "../constants"
 import { history } from "../../App";
 import { productService } from "../../Services/ProductService.js";
 import { categoryService } from "../../Services/CategoryService.js";
+import { cardIdeasService } from "../../Services/CardIdeasService.js";
   export const LoginAction = (value) => {
     return async (dispatch) => {
       try {
@@ -78,14 +79,14 @@ import { categoryService } from "../../Services/CategoryService.js";
     };
   };
 
-  export const getAllCategoryAction = () => {
+  export const getAllCardIdeasAction = () => {
     return async (dispatch) => {
       try {
         
-        const result = await categoryService.getAllCategory();
+        const result = await cardIdeasService.getAllCard();
         if (result.data.data.status === "OK") {
           dispatch({
-            type: GET_ALL_CATEGORY,
+            type: GET_ALL_CARD_IDEAS,
             data: result.data.data.data,
           });
         }else{

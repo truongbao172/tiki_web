@@ -2,22 +2,30 @@ import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import cart from "../../assects/images/cart.PNG"
 import search from "../../assects/images/search.PNG"
-import $ from 'jquery'
+import {categoryService} from "../../Services/CategoryService.js"
 import './styles.scss'
-import { useDispatch, useSelector } from 'react-redux'
-import { getAllCategoryAction } from '../../redux/actions'
-const Header = (props) => {
-    const dataNav = props.dataNav
+const Header = () => {
+    const [header,setHeader] = useState([])
     const [offset, setOffset] = useState(0);
     const listNav = [{ name: "MY ACCOUNT", url: "/customer" }, { name: "TIKI IDEAS", url: "/ideas/" }, { name: "CUSTOMER SERVICE", url: "" }, { name: "BUYER'S GUIDE", url: "" }, { name: "FAQS", url: "" }]
     const listNav2 = [{ name: "TORCHES & TABLETOP", url: "torches" }, { name: "OUTDOOR LIGHTING", url: "outdoor-lighting" }, { name: "FIRE PITS", url: "fire-pits" }, { name: "FUEL & WOOD PELLETS", url: "fuel-wood-pellets" }, { name: "PARTS & ACCESSORIES", url: "parts-accessories" }, { name: "SALE", url: "sale" }]
-    
-    const dispatch = useDispatch();
-    const action = getAllCategoryAction();
+
+    const getDataHeader = () =>{
+        categoryService.getAllCategory().then((result)=>{
+            setHeader(result.data.data.data)
+        }).catch((err)=>{
+            console.log(err)
+        })
+    } 
     useEffect(() => {
-        console.log("x")
-        dispatch(action);
-      },[])
+        getDataHeader()
+        const onScroll = () => setOffset(window.pageYOffset);
+        // clean up code
+        window.removeEventListener("scroll", onScroll);
+        window.addEventListener("scroll", onScroll, { passive: true });
+        return () => window.removeEventListener("scroll", onScroll);
+    }, []);
+
     const renderListNav = () => {
         return <>
             <ul>
@@ -55,8 +63,8 @@ const Header = (props) => {
     const renderListNav2 = () => {
         return <>
             <ul className="navbar-nav me-auto mb-2 mb-lg-0 mx-auto">
-                {dataNav.map(item => {
-                    return <li className="nav-item">
+                {header.map((item, index) => {
+                    return <li className="nav-item" key={index}>
                         <Link onBlur={(e) => { clickOut(e) }} className="nav-link" to={`/product/${item.ids}`}>
                             <span onClick={(e) => { handelClick(e) }}>
                                 {item.name}
@@ -81,13 +89,6 @@ const Header = (props) => {
         }
     }
 
-    useEffect(() => {
-        const onScroll = () => setOffset(window.pageYOffset);
-        // clean up code
-        window.removeEventListener("scroll", onScroll);
-        window.addEventListener("scroll", onScroll, { passive: true });
-        return () => window.removeEventListener("scroll", onScroll);
-    }, []);
 
 
 

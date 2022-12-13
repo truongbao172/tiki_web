@@ -1,7 +1,6 @@
 import React from 'react'
 import "./styles.scss"
 function CardHomePage({data,reverse}) {
-    console.log("data",data)
   return (
     <div className='cardHomePage'>
         <div className="cart_content">

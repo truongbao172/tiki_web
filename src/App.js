@@ -2,7 +2,7 @@ import './App.scss';
 import { BrowserRouter as Router, Route, Routes, useParams } from "react-router-dom";
 import Home from './pages/HomePage';
 import MyAccount from './pages/MyAccount';
-import Layout from './HOCs/layout';
+import Layout from './Template/layout';
 import CreateAccount from './pages/CreateAccount';
 import { createBrowserHistory } from "history";
 import TikiIdeas from './pages/TikiIdeas';

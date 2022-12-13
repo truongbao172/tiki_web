@@ -73,3 +73,15 @@ li{
       color: #000;
   }
 }
+.button-black-card-idea{
+  font-size: 18px;
+  line-height: 25px;
+  padding: 10px 15px;
+  background-color: #000;
+  color: #ffffff;
+  &:hover{
+      border: 1px solid black;
+      background-color:#f7b917;
+      color: #000;
+  }
+}
