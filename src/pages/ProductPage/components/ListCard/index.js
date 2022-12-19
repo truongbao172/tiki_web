@@ -1,10 +1,17 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { useDispatch } from 'react-redux'
+import LoadingSpinner from '../../../../components/LoadingSpinner'
+import { getAllProductAction } from '../../../../redux/actions'
 import Card from '../Card'
 import "./styles.scss"
 const ListCard = (props) => {
   const { dataOfCategory } = props
   console.log("list card", dataOfCategory)
-
+  const dispatch = useDispatch();
+  const action = getAllProductAction();
+  useEffect(() => {
+    dispatch(action);
+  }, [])
   const renderListCard = () =>{
     return dataOfCategory.map((item,index) =>{
       return <div className='col-md-4 col-6' key={index}>

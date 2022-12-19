@@ -17,11 +17,6 @@ function App() {
   const getAllProduct = useSelector((state) => state.ProductReducer.getAllProduct);
   console.log("getAllProduct", getAllProduct)
   
-  const dispatch = useDispatch();
-  const action = getAllProductAction();
-  useEffect(() => {
-    dispatch(action);
-  }, [])
   return (
     <div>
       <main>

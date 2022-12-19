@@ -1,13 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { useEffect } from 'react'
 import "./styles.scss"
-const FilterList = () => {
+const FilterList = (props) => {
     const listFilter = [
         {
             id: "item1",
             title: 'CATEGORY',
             search: false,
             listItem: [
-                { name: "Torches & Tabletop" },
+                { name: "Torches & Tabletop", id: "cate1" },
             ]
 
         },
@@ -16,11 +17,11 @@ const FilterList = () => {
             title: 'PRODUCT TYPES',
             search: false,
             listItem: [
-                { name: "Candle" },
-                { name: "Kit/Combo" },
-                { name: "Table Torch" },
-                { name: "TIKI Torch" },
-                { name: "Torch Fuel" },
+                { name: "Candle", id: "ptype1" },
+                { name: "Kit/Combo", id: "ptype2" },
+                { name: "Table Torch", id: "ptype3" },
+                { name: "TIKI Torch", id: "ptype4" },
+                { name: "Torch Fuel", id: "ptype5" },
             ]
 
         },
@@ -29,8 +30,8 @@ const FilterList = () => {
             title: 'PACKS',
             search: true,
             listItem: [
-                { name: "Kit/Combo" },
-                { name: "Multipack" },
+                { name: "Kit/Combo", id: "parks1" },
+                { name: "Multipack", id: "parks2" },
             ]
 
         },
@@ -39,7 +40,7 @@ const FilterList = () => {
             title: 'COLOR',
             search: false,
             listItem: [
-                { name: "null" },
+                { name: "null", id: "color1" },
             ]
 
         },
@@ -48,13 +49,13 @@ const FilterList = () => {
             title: 'STYLE',
             search: true,
             listItem: [
-                { name: "Americana" },
-                { name: "Classic TIKI" },
-                { name: "Coastal/Nautical" },
-                { name: "Modern" },
-                { name: "Rustic" },
-                { name: "Traditional" },
-                { name: "Tropical" },
+                { name: "Americana", id: "style1" },
+                { name: "Classic TIKI", id: "style2" },
+                { name: "Coastal/Nautical", id: "style3" },
+                { name: "Modern", id: "style4" },
+                { name: "Rustic", id: "style5" },
+                { name: "Traditional", id: "style6" },
+                { name: "Tropical", id: "style7" },
             ]
 
         },
@@ -63,17 +64,17 @@ const FilterList = () => {
             title: 'FEATURES',
             search: true,
             listItem: [
-                { name: "Adjustable Flame" },
-                { name: "Contains Citronella" },
-                { name: "Convertible" },
-                { name: "Deck Clamp Included" },
-                { name: "Easy Installation" },
-                { name: "Large Flame" },
-                { name: "Less Soot & Smoke" },
-                { name: "New" },
-                { name: "Repels Mosquitoes" },
-                { name: "Weather Resistant" },
-                { name: "Wide Mouth Can" },
+                { name: "Adjustable Flame", id: "features1" },
+                { name: "Contains Citronella", id: "features2" },
+                { name: "Convertible", id: "features3" },
+                { name: "Deck Clamp Included", id: "features4" },
+                { name: "Easy Installation", id: "features5" },
+                { name: "Large Flame", id: "features6" },
+                { name: "Less Soot & Smoke", id: "features7" },
+                { name: "New", id: "features8" },
+                { name: "Repels Mosquitoes", id: "features9" },
+                { name: "Weather Resistant", id: "features10" },
+                { name: "Wide Mouth Can", id: "features11" },
             ]
         },
         {
@@ -81,10 +82,10 @@ const FilterList = () => {
             title: 'MATERIAL',
             search: true,
             listItem: [
-                { name: "Bamboo" },
-                { name: "Glass" },
-                { name: "Metal" },
-                { name: "Resin" },
+                { name: "Bamboo", id: "material1" },
+                { name: "Glass", id: "material2" },
+                { name: "Metal", id: "material3" },
+                { name: "Resin", id: "material4" },
             ]
         },
         {
@@ -92,7 +93,7 @@ const FilterList = () => {
             title: 'PRICE',
             search: false,
             listItem: [
-                { name: "null" },
+                { name: "null", id: "price1" },
             ]
         },
         {
@@ -100,8 +101,8 @@ const FilterList = () => {
             title: 'AVAILABILITY',
             search: false,
             listItem: [
-                { name: "Available Online" },
-                { name: "In Store Only" },
+                { name: "Available Online", id: "ava1" },
+                { name: "In Store Only", id: "ava2" },
             ]
         },
         {
@@ -109,13 +110,52 @@ const FilterList = () => {
             title: 'CUSTOMER RATING',
             search: false,
             listItem: [
-                { name: "★★★★ & up" },
-                { name: "★★★★★" },
+                { name: "★★★★ & up", id: "rating1" },
+                { name: "★★★★★", id: "rating2" },
             ]
         },
 
 
     ]
+
+
+    const [arrFilter, setArrFilter] = useState([])
+    const [loading, setLoading] = useState(false)
+    const searchFilter = (e) => {
+        const data = e.target.id
+        let dataLast = ''
+        let temp = [...arrFilter]
+        listFilter.map((item) => {
+            return item.listItem.map((val) => {
+                if (val.id === data) {
+                    dataLast = { title: item.title, value: val.name, id: data }
+                    temp.push(dataLast)
+                }
+            })
+        })
+        return setArrFilter(temp)
+    }
+    const handleDeteleFilter = (e) => {
+        const index = e.target.id
+        let deleteFilter = arrFilter.filter(item => item.id !== index)
+        setArrFilter(deleteFilter)
+
+    }
+    const clearAll = () => {
+        setArrFilter([])
+    }
+
+    const renderSeachFilter = () => {
+        return <div>
+            {
+                arrFilter.map((item, index) => {
+                    return <button key={index} className='search_filter_item'><i onClick={(e) => { handleDeteleFilter(e) }} className="fa-regular fa-x" id={item.id}></i><span>{item.title}: {item.value}</span></button>
+                })
+            }
+            {arrFilter.length > 0 ? <span className='clearAll' onClick={() => { clearAll() }}>CLEAR ALL</span> : ""}
+        </div>
+
+    }
     const renderListFilter = () => {
         return listFilter.map((item, index) => {
             return <>
@@ -134,7 +174,7 @@ const FilterList = () => {
                                 <ul>
                                     {
                                         item.listItem.map((value, index) => {
-                                            return <li><span>{value.name}</span></li>
+                                            return <li><span onClick={(e) => { searchFilter(e) }} id={value.id}>{value.name}</span></li>
                                         })
                                     }
                                 </ul>
@@ -148,6 +188,11 @@ const FilterList = () => {
     return (
         <div id='filterList'>
             <div className="accordion acc_filter" id="accordionFilter">
+                <div className='search_filter'>
+                    <div className='search_filter_container'>
+                        {renderSeachFilter()}
+                    </div>
+                </div>
                 {renderListFilter()}
             </div>
             <div className='wish'>

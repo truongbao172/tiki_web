@@ -110,4 +110,27 @@
             }
         }
     }
+    .search_filter{
+        .search_filter_container{
+            .search_filter_item{
+                display: block;
+                background-color:#f7b917 ;
+                padding: 4px 10px 4px 6px; 
+                line-height: 22.8571px;
+                margin-bottom: 10px;
+                border: none;
+                text-transform: uppercase;
+                i{
+                    font-size: 14px;
+                    margin-right: 10px;
+                }
+                span{
+                    font-weight: 900;
+                }
+            }
+        }
+        .clearAll{
+            cursor: pointer;
+        }
+    }
 }

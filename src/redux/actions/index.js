@@ -82,7 +82,6 @@ import { cardIdeasService } from "../../Services/CardIdeasService.js";
   export const getAllCardIdeasAction = () => {
     return async (dispatch) => {
       try {
-        
         const result = await cardIdeasService.getAllCard();
         if (result.data.data.status === "OK") {
           dispatch({

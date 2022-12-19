@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import cart from "../../assects/images/cart.PNG"
+import cart_white from "../../assects/images/cart-white.PNG"
 import search from "../../assects/images/search.PNG"
 import {categoryService} from "../../Services/CategoryService.js"
+import search_white from "../../assects/images/search_white.PNG"
 import './styles.scss'
 const Header = () => {
     const [header,setHeader] = useState([])
@@ -65,8 +67,8 @@ const Header = () => {
             <ul className="navbar-nav me-auto mb-2 mb-lg-0 mx-auto">
                 {header.map((item, index) => {
                     return <li className="nav-item" key={index}>
-                        <Link onBlur={(e) => { clickOut(e) }} className="nav-link" to={`/product/${item.ids}`}>
-                            <span onClick={(e) => { handelClick(e) }}>
+                        <Link onBlur={(e) => { clickOut(e) }}  onClick={(e) => { handelClick(e) }} className="nav-link" to={`/product/${item.ids}`}>
+                            <span >
                                 {item.name}
                             </span>
                         </Link>
@@ -129,19 +131,19 @@ const Header = () => {
                         <Link className="logo" to="/" title="TIKI Brand Logo" aria-label="TIKI Brand Logo">
                             <img src="https://www.tikibrand.com/media/logo/stores/1/tiki-brand-logo.png" title="TIKI Brand Logo" alt="TIKI Brand Logo" width={170} height={68} />
                         </Link>
-                        {/* <div className="search">
-                    <form className="search-container">
-                        <input type="text" id="search-bar" placeholder="Search entire store here" />
-                        <Link to="" className='search-icon'>
-                           <img src={search} alt="" />
-                        </Link>
-                    </form>
-                    <div className='cart'>
-                        <Link to="">
-                            <img src={cart} alt="" />
-                        </Link>
-                    </div>
-                </div> */}
+                        <div className="header_right">
+                            <form className="search-container">
+                                <input type="text" id="search-bar" placeholder="Search entire store here" />
+                                <Link to="" className='search-icon'>
+                                    <img src={search_white} alt="" />
+                                </Link>
+                            </form>
+                            <div className='cart'>
+                                <Link to="">
+                                    <img src={cart_white} alt="" />
+                                </Link>
+                            </div>
+                        </div>
                     </div>
                     <div className='header_nav'>
                         <nav className="navbar navbar-expand-lg">

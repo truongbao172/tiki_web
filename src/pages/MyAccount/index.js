@@ -81,7 +81,7 @@ const MyAccount = (props) => {
           </div>
         </div>
       </div> : <div className="text-center">
-        <h1 >Hello User ({UserInfo.email}) !!!</h1>
+        <h1 >Hello User ({UserInfo.email ||UserInfo.data.email}) !!!</h1>
         <button onClick={(e) => { logOut(e) }}>Logout</button>
       </div>}
     </div>

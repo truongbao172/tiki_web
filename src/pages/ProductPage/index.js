@@ -15,7 +15,6 @@ const ProductPage = (props) => {
     console.log("detail", nameId)
     const beadcrumbProp = [{ name: 'HOME', status: '', url: '/' }, { name: 'TORCHES & TABLETOP', status: 'ACTIVE', url: '/' }]
     const bannerProps = { img: "https://www.tikibrand.com/media/ideas_banners/default/Landing_Page_IDEAS.jpg", title: "TORCHES & TABLETOP" }
-
     const dataOfCategory = getAllProduct.filter(item =>item.category.Ids === nameId)
     return (
         <div id="productPage">
@@ -28,9 +27,9 @@ const ProductPage = (props) => {
             <div className='product_content'>
                 <div className='row p-0 m-0'>
                     <div className='left'>
-                        <LeftFilter />
+                        <LeftFilter/>
                     </div>
-                    <div className='right'>
+                    <div className='right'> 
                         <SortProduct />
                         <ListCard dataOfCategory={dataOfCategory} />
                     </div>

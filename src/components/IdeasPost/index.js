@@ -13,7 +13,7 @@ function IdeasPost({ revert, data }) {
 
   const renderTopic = (arr) => {
     return arr.map((item, index) => {
-      return <Link key={index} className="ideas-tags" to=""><span className="ideas">{item}, </span></Link>
+      return <Link key={index} className="ideas-tags" to=""><span className="ideas">{item} </span></Link>
     })
   }
   return (
