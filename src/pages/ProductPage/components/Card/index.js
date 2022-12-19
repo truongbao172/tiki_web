@@ -1,5 +1,6 @@
 import React from 'react'
 import "./styles.scss"
+import starRating from "../../../../assects/images/star.PNG"
 const Card = (props) => {
   const { data } = props
   const { status, category, description, image, name, price, quatity, rating } = data
@@ -9,7 +10,7 @@ const Card = (props) => {
       <>
         {[...Array(star)].map((star) => {        
           return (         
-            <i className="fa-sharp fa-solid fa-star"></i>       
+              <img src={starRating}/>
           );
         })}
       </>

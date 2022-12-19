@@ -3,6 +3,7 @@ import React from 'react'
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { CreatAccountAction } from "../../redux/actions/index"
+import chapcha from "../../assects/images/capcha.PNG"
 import "./styles.scss"
 function CreateAccForm() {
     const listInterests = ["Baby", "Cooking", "Crafting", "Decorating", "Electronics", "Fashion & Style", "Interior Design & Furniture", "Games", "Lighting", "Music", "Outdoors", "Parenting", "Pets", "Sports", "Travel", "Arts & Culture", "Movies & TV", "Food & Wine", "Health & Fitness", "Volunteering",];
@@ -162,11 +163,11 @@ function CreateAccForm() {
                         </legend>
                         <div className="form-group field">
                             <label>First Name <span className='doc'>*</span></label>
-                            <input onChange={props.handleChange} value={props.values.firstName} id='firstName' name='firstName' placeholder="First Name" type="text" className="form-control" />
+                            <input onChange={props.handleChange} value={props.values.firstName} id='firstName' name='firstName' type="text" className="form-control" />
                         </div>
                         <div className="form-group field">
                             <label>Last Name <span className='doc'>*</span></label>
-                            <input onChange={props.handleChange} value={props.values.lastName} id='lastName' name='lastName' placeholder="Last Name" type="text" className="form-control" />
+                            <input onChange={props.handleChange} value={props.values.lastName} id='lastName' name='lastName' type="text" className="form-control" />
                         </div>
                         <div className="form-group field">
                             <input type="checkbox" id="exampleCheck1" />
@@ -277,6 +278,9 @@ function CreateAccForm() {
                             <div className='field'>
                                 <label htmlFor="exampleInputPassword1" className="form-label">Confirm Password  <span className='doc'>*</span></label>
                                 <input type="password" id="confirm_password" name="password_confirmation" title="Confirm Password" className="form-control" aria-required="true" />
+                            </div>
+                            <div className='capcha'>
+                                <img src={chapcha} alt="" />
                             </div>
                         </div>
                     </div>

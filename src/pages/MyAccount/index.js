@@ -42,12 +42,12 @@ const MyAccount = (props) => {
         <h1>ACCOUNT SIGN IN</h1>
       </div>
       {!getToken ? <div className="main row">
-        <div className="col-md-6 col-12">
+        <div className="form_account col-md-6 col-12">
           <div className="login-form">
             <form onSubmit={formik.handleSubmit}>
               <div className="login_form_tilte">
                 <h2 className='block-new-customer-heading'>SIGN IN</h2>
-                <p className='p_title'>If you have an account, sign in with your email address.</p>
+                <p className='p_title2'>If you have an account, sign in with your email address.</p>
               </div>
               <div className="form-group">
                 <label>Email <span className='doc'>*</span></label>
@@ -57,7 +57,7 @@ const MyAccount = (props) => {
                 <label>Password <span className='doc'>*</span></label>
                 <input id="password" onChange={formik.handleChange} type="password" className="form-control" placeholder="" />
               </div>
-              <div className='py-3'>
+              <div className='capcha'>
                 <img src={chapcha} alt="" />
               </div>
               <div className='btn_login d-flex align-items-center'>
@@ -67,7 +67,7 @@ const MyAccount = (props) => {
             </form>
           </div>
         </div>
-        <div className='col-md-6 col-12'>
+        <div className='create_account col-md-6 col-12'>
           <div>
             <h2 className="block-new-customer-heading" role="heading">Sign Up</h2>
           </div>

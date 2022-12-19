@@ -48,7 +48,7 @@
             font-weight: 600;
             line-height: 25px;
             font-size: 18px;
-            margin-bottom: 10px;
+            margin-bottom: 6px;
             display: block;
           
         }
@@ -85,10 +85,16 @@
     .p_title{
         font-size: 18px;
         line-height: 26px;
-        max-width: 0px 0px 20px;
+        padding: 0px 0px 10px;
+    }
+    .p_title2{
+        font-size: 18px;
+        line-height: 26px;
+        padding: 0px 0px 4px;
     }
     .doc{
         color: #cd4c21;
+        font-size: small;
     }
     .login-main-text h2{
         font-weight: 300;
@@ -100,5 +106,19 @@
     }
     .bcrumAcc{
         transform: translateY(-25px);
+    }
+    .create_account{
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 3px;
+    }
+    .form_account{
+        padding-left: 15px;
+        padding-top: 3px;
+        padding-right: 15px;
+    }
+    .capcha{
+        margin-left: -2px;
+        margin-bottom: 11px;
     }
 }
