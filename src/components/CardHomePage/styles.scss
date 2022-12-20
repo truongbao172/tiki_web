@@ -1,8 +1,16 @@
 .cardHomePage{
     margin-bottom: 60px;
     .cart_content{
+        @media (min-width: 768px){
+            .row-container{
+                max-width: 1920px;
+                width: 100%;
+                margin: 0 auto;
+            }
+        }
         .homepage-cta-img{
             padding-right: 0;
+            padding-left: 0;
             img{
                 box-shadow: -10px 10px 0px 0px #f7b917;
                 width: 100%;

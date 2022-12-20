@@ -4,7 +4,7 @@ function CardHomePage({data,reverse}) {
   return (
     <div className='cardHomePage'>
         <div className="cart_content">
-            <div className={`row ${reverse ? "flex-row-reverse img-shadow" : ""}`}>
+            <div className={`row row-container ${reverse ? "flex-row-reverse img-shadow" : ""}`}>
               {/* d-flex flex-column flex-md-row flex-wrap flex-md-nowrap */}
                 <div className='homepage-cta-img col-md-6 col-10 mb-md-4 mb-md-0 order-md-1 order-1 '>
                     <img src={data.image} alt="" />
