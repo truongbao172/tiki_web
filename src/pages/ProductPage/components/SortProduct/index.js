@@ -8,16 +8,29 @@ const SortProduct = () => {
             </div>
             <div className='sortBy'>
                 <span>SORT BY</span>
-                <div className="dropdown">
-                    <span className="dropdown-toggle" type="button" id="dropdow_sort" data-bs-toggle="dropdown" aria-expanded="false">
-                        Dropdown button
-                    </span>
-                    <ul className="dropdown-menu" aria-labelledby="dropdow_sort">
-                        <li><a className="dropdown-item" href="#">Action</a></li>
-                        <li><a className="dropdown-item" href="#">Another action</a></li>
-                        <li><a className="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
-                </div>
+                <span classname="dropdown">
+                    <select id="sorter" data-role="sorter" className="sorter-options" data-acsb-navigable="true" data-acsb-now-navigable="true" aria-hidden="false" data-acsb-hidden="false" type="select-one" data-acsb-validation-uuid="sorter" data-acsb-field-visible="true" aria-label="Sort By" placeholder="Sort By" data-acsb-tooltip="Sort By">
+                        <option value="position~asc" selected="selected">
+                            Most Relevant </option>
+                        <option value="name~asc">
+                            Alphabetical (A-Z)</option>
+                        <option value="name~desc">
+                            Alphabetical (Z-A)</option>
+                        <option value="price~asc">
+                            Price (Low to High)</option>
+                        <option value="price~desc">
+                            Price (High to Low)</option>
+                        <option value="new_arrivals~desc">
+                            Newest </option>
+                        <option value="top_seller~desc">
+                            Best Selling </option>
+                        <option value="bv_average_overall_rating~asc">
+                            Top Rated</option>
+                        <option value="bv_total_reviews~asc">
+                            Most Reviewed  </option>
+                    </select>
+                </span>
+
             </div>
         </div>
     )

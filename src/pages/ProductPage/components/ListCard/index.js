@@ -14,7 +14,7 @@ const ListCard = (props) => {
   }, [])
   const renderListCard = () =>{
     return dataOfCategory.map((item,index) =>{
-      return <div className='col-md-4 col-6' key={index}>
+      return <div className='item col-md-4 col-6' key={index}>
                 <Card data = {item}/>
         </div>
     })

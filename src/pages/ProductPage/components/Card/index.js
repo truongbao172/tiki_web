@@ -10,7 +10,7 @@ const Card = (props) => {
       <>
         {[...Array(star)].map((star) => {        
           return (         
-              <img src={starRating}/>
+              <span><img src={starRating}/></span>
           );
         })}
       </>

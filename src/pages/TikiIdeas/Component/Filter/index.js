@@ -2,7 +2,7 @@ import React from 'react'
 import "./styles.scss"
 const Filter = () => {
     return (
-        <div id='filterIdeas' className='mt-4 mb-2'>
+        <div id='filterIdeas' className='position'>
             <div className="accordion accordion-flush" id="accordionFlushExample">
                 <div className="accordion-item">
                     <h2 className="accordion-header" id="flush-headingOne">

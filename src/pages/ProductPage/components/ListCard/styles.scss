@@ -1,4 +1,7 @@
 .product-list-card{
     padding-left: 16px;
     padding-top: 3px;
+    .item{
+        padding-left: 0 !important;
+    }
 }

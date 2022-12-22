@@ -1,7 +1,8 @@
 .card-item-product{
     margin-bottom: 45px;
+    padding: 10px;
    .product-item{
-    width: 97%;
+    width: 100%;
         .product-item-info{
             .product_image{
                 width: 443px;
@@ -28,7 +29,8 @@
             }
             .product-item-details{
                 .name_card{
-                    margin-bottom: 41px;
+                    min-height: 46px;
+                    margin-bottom: 20px;
                     margin-top: 3px;
                     a{
                         h3{
@@ -43,13 +45,17 @@
                     }
                 }
                 .rating-star{
-                    margin-bottom: 10px;
+                    // margin-bottom: 10px;
+                    min-height: 30px;
                     .star-vote{
                         margin-right: 10px;
+                       span{
+                        margin-right: 1px;
                         img{
                             width: 19px;
                             height: 18px;
                         }
+                       }
                     }
                     .cout-vote{
                         font-size: 18px;
@@ -57,7 +63,7 @@
                     }
                 }
                 .price{
-                    margin-bottom: 20px;
+                    margin: 10px 0 25px;
                     font-weight: 700;
                     padding: 0px 3px 0px 0px;
                     font-size: 16px;
