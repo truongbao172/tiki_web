@@ -20,7 +20,7 @@
     }
     a.active{
         color: #000000;
-        text-decoration: none;
+        text-decoration: none !important;
     }
     .theme-pearl.store-view-default .breadcrumbs .item:not(:last-child):after{
         padding-left: 17px !important;

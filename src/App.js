@@ -10,6 +10,7 @@ import ProductPage from './pages/ProductPage';
 import { useDispatch, useSelector } from 'react-redux';
 import { getAllProductAction } from './redux/actions';
 import { useEffect } from 'react';
+import CustomerService from './pages/CustomerService';
 export const history = createBrowserHistory();
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
               <Route path='/product/' element={<ProductPage getAllProduct={getAllProduct} />}>
                 <Route path=":nameId" element={<ProductPage />} />
               </Route>
+              <Route path='/customer-service' element={<CustomerService />} />
             </Route>
           </Routes>
         </Router>

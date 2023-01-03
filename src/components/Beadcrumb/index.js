@@ -5,7 +5,7 @@ const Beadcrumb = (props) => {
   const data = props.beadcrumbProp
   const renderBeadcrumb = () =>{
     return data.map((item, index)=>{
-      return <li key={index} className="breadcrumb-item"><Link className={`${item.status == 'ACTIVE' ? "active" : ""}`} to={item.url}>{item.name}</Link></li>
+      return <li key={index} className="breadcrumb-item"><Link className={`${item.status === 'ACTIVE' ? "active" : "abc "}`} to={item.url}>{item.name}</Link></li>
       })
   }
   return (
