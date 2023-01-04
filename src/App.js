@@ -11,6 +11,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getAllProductAction } from './redux/actions';
 import { useEffect } from 'react';
 import CustomerService from './pages/CustomerService';
+import BuyersGuide from './pages/BuyersGuide';
 export const history = createBrowserHistory();
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
                 <Route path=":nameId" element={<ProductPage />} />
               </Route>
               <Route path='/customer-service' element={<CustomerService />} />
+              <Route path='/buyersguide/' element={<BuyersGuide/>} />
             </Route>
           </Routes>
         </Router>
