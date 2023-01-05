@@ -29,8 +29,8 @@
                 }
             }
             .btn_shop{
-                background-color: #cd4c21;
-                color: #ffffff;
+                background-color: #ffffff;
+                color: #000000;
                 display: inline-block;
                 font-family: 'Cantarell',sans-serif;
                 font-size: 18px;
@@ -41,6 +41,7 @@
                 transition: all 0.5s;
                 &:hover{
                     background-color: #000000;
+                    color: #ffffff;
                 }
             }
         }

@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import Beadcrumb from "../../components/Beadcrumb";
+import ListCardBuyer from "./components/ListCardBuyer";
 import "./styles.scss";
 const BuyersGuide = () => {
     const [select, setSelect] = useState("all")
@@ -85,7 +86,7 @@ const BuyersGuide = () => {
                 </ul>
             </div>
             <div className="list_card_nav">
-                    asa
+                    <ListCardBuyer/>
             </div>
 
         </div>
