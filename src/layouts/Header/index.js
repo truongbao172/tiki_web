@@ -9,7 +9,7 @@ import './styles.scss'
 const Header = () => {
     const [header,setHeader] = useState([])
     const [offset, setOffset] = useState(0);
-    const listNav = [{ name: "MY ACCOUNT", url: "/customer" }, { name: "TIKI IDEAS", url: "/ideas/" }, { name: "CUSTOMER SERVICE", url: "/customer-service" }, { name: "BUYER'S GUIDE", url: "/buyersguide/" }, { name: "FAQS", url: "" }]
+    const listNav = [{ name: "MY ACCOUNT", url: "/customer" }, { name: "TIKI IDEAS", url: "/ideas/" }, { name: "CUSTOMER SERVICE", url: "/customer-service" }, { name: "BUYER'S GUIDE", url: "/buyersguide/" }, { name: "FAQS", url: "/faqs/" }]
     const listNav2 = [{ name: "TORCHES & TABLETOP", url: "torches" }, { name: "OUTDOOR LIGHTING", url: "outdoor-lighting" }, { name: "FIRE PITS", url: "fire-pits" }, { name: "FUEL & WOOD PELLETS", url: "fuel-wood-pellets" }, { name: "PARTS & ACCESSORIES", url: "parts-accessories" }, { name: "SALE", url: "sale" }]
 
     const getDataHeader = () =>{

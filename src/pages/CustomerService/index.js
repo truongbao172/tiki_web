@@ -29,7 +29,7 @@ const CustomerService = () => {
                 },
                 {
                     name : "Email Sign-up",
-                    url: ""
+                    url: "/customer-service/signup"
                 },
                 {
                     name: "Where to Buy",

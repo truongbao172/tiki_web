@@ -7,11 +7,12 @@ import CreateAccount from './pages/CreateAccount';
 import { createBrowserHistory } from "history";
 import TikiIdeas from './pages/TikiIdeas';
 import ProductPage from './pages/ProductPage';
-import { useDispatch, useSelector } from 'react-redux';
-import { getAllProductAction } from './redux/actions';
-import { useEffect } from 'react';
+import { useSelector } from 'react-redux';
 import CustomerService from './pages/CustomerService';
 import BuyersGuide from './pages/BuyersGuide';
+import FAQs from './pages/FAQs';
+import SignupCustomer from './pages/SignupCustomer';
+import DetailProduct from './pages/DetailProduct';
 export const history = createBrowserHistory();
 
 function App() {
@@ -30,10 +31,13 @@ function App() {
               <Route path='/customer/account/create/' element={<CreateAccount />} />
               <Route path='/ideas/' element={<TikiIdeas />} />
               <Route path='/product/' element={<ProductPage getAllProduct={getAllProduct} />}>
-                <Route path=":nameId" element={<ProductPage />} />
+                <Route path=":nameId/" element={<ProductPage />}/>
               </Route>
-              <Route path='/customer-service' element={<CustomerService />} />
+              <Route path=":id/" element={<DetailProduct />} />
+              <Route path='/customer-service/' element={<CustomerService />}/>
+              <Route path='/customer-service/signup' element={<SignupCustomer/>}></Route>
               <Route path='/buyersguide/' element={<BuyersGuide/>} />
+              <Route path='/faqs/' element={<FAQs/>} />
             </Route>
           </Routes>
         </Router>

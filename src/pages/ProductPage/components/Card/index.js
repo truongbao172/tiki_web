@@ -3,7 +3,7 @@ import "./styles.scss"
 import starRating from "../../../../assects/images/star.PNG"
 const Card = (props) => {
   const { data } = props
-  const { status, category, description, image, name, price, quatity, rating } = data
+  const { status, category, description, image, name, price, quatity, rating, _id } = data
 
   const renderStar = (star) =>{
     return (
@@ -22,7 +22,7 @@ const Card = (props) => {
         <div className='product-item-info'>
           <div className='product_image'>
             <div className='image'>
-              <a href="">
+              <a href={`/${_id}`}>
                 <img src={image} alt="" />
               </a>
             </div>

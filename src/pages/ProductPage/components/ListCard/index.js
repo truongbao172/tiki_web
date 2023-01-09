@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import { useDispatch } from 'react-redux'
+import { Link } from 'react-router-dom'
 import LoadingSpinner from '../../../../components/LoadingSpinner'
 import { getAllProductAction } from '../../../../redux/actions'
 import Card from '../Card'
@@ -8,14 +9,14 @@ const ListCard = (props) => {
   const { dataOfCategory } = props
   console.log("list card", dataOfCategory)
   const dispatch = useDispatch();
-  const action = getAllProductAction();
+  const action = getAllProductAction(); 
   useEffect(() => {
     dispatch(action);
   }, [])
   const renderListCard = () =>{
     return dataOfCategory.map((item,index) =>{
       return <div className='item col-md-4 col-6' key={index}>
-                <Card data = {item}/>
+                <Link to={`/${item._id}`} ><Card data = {item}/></Link>
         </div>
     })
   }

@@ -3,13 +3,13 @@ import CardBuyer from '../CardBuyer'
 import "./styles.scss"
 const ListCardBuyer = () => {
     return (
-        <div>
-            <div className='row justify-content-center'>
+            <div className='row justify-content-center list_content'>
                 <div className='col-12 col-md-10'>
+                    <CardBuyer />
+                    <CardBuyer />
                     <CardBuyer />
                 </div>
             </div>
-        </div>
     )
 }
 
